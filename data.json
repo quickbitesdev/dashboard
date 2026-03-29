@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-29T09:35:57.211239+00:00",
+  "last_updated": "2026-03-29T10:36:00.183062+00:00",
   "day": 7,
   "summary": "Day 7. F&G=9 extreme fear persists, but the circuit breaker just dropped from 0.30 to 0.15 \u2014 contrarian dip buying is now unlocked. NVDA (+13.72% news sentiment) and MSFT (+5.12%) are primed. Reddit off-topic comment bug flagged. 255 news articles analyzed this cycle. ChordRoom at 18,627 total visitors.",
   "budget": {
@@ -40,14 +40,14 @@
   },
   "chordroom": {
     "status": "up",
-    "visitors_total": 475,
-    "visitors_daily": 79,
+    "visitors_total": 476,
+    "visitors_daily": 76,
     "visitors_yesterday": 118,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
   "trading": {
-    "etoro_status": "Real mode, 235 runs, 72 trades",
+    "etoro_status": "Real mode, 236 runs, 72 trades",
     "etoro_positions": "9 bot + 8 legacy = 17 total",
     "etoro_free_cash": 359.46,
     "etoro_invested": 0,
@@ -67,19 +67,19 @@
     "paper_bots": {
       "Crypto": {
         "balance": {
-          "usdt": 80.89071882935212,
-          "btc": 0.0002624463986145517
+          "usdt": 47.84071882935213,
+          "btc": 0.0007587952683433229
         },
         "pnl": 0,
-        "trades": 48
+        "trades": 50
       },
       "ETH": {
         "balance": {
-          "usdt": 82.90512500672416,
-          "eth": 0.006853127727972774
+          "usdt": 56.865125006724156,
+          "eth": 0.019880553360583364
         },
         "pnl": 0,
-        "trades": 43
+        "trades": 45
       },
       "SOL": {
         "balance": {
@@ -109,58 +109,51 @@
     "fear_greed_label": "Extreme Fear"
   },
   "marketing": {
-    "total_posts": 141,
+    "total_posts": 142,
     "chordroom_mentions": 25,
     "direct_links": 30,
     "platforms": [
-      "Pixelfed (pixel.tchncs.de)",
-      "Mastodon (mastodon.social)",
-      "Funkwhale",
-      "Write.as",
-      "Auto-posters",
-      "Pixelfed",
-      "Nostr",
-      "Matrix",
-      "Mastodon (toot.community)",
-      "Mastodon (mastodon.world)",
-      "Dev.to",
-      "Chordie",
-      "Lemmy (discuss.tchncs.de)",
-      "Mastodon (mstdn.social)",
-      "Mastodon (toot.community + ieji.de)",
-      "Funkwhale (open.audio)",
-      "Mastodon (ieji.de)",
-      "Mastodon (defcon.social)",
-      "Mastodon",
-      "ieji.de",
-      "Bandcamp",
-      "Cron",
-      "Codeberg",
-      "Mastodon (masto.nu)",
-      "Hacker News",
-      "Mastodon (universeodon.com)",
-      "Fediverse",
-      "Substack",
-      "Bear Blog",
-      "Multiple",
-      "Defcon.social",
-      "Gitea",
-      "Toot.community",
-      "Indie Hackers",
       "GitLab",
-      "BookWyrm",
       "PeerTube (tilvids.com)",
       "Lemmy",
-      "Mastodon (mstdn.ca)"
+      "Fediverse",
+      "Indie Hackers",
+      "Cron",
+      "Bandcamp",
+      "Hacker News",
+      "ieji.de",
+      "Nostr",
+      "Auto-posters",
+      "Codeberg",
+      "Substack",
+      "Funkwhale",
+      "Defcon.social",
+      "Mastodon (universeodon.com)",
+      "Mastodon",
+      "Mastodon (defcon.social)",
+      "Lemmy (discuss.tchncs.de)",
+      "Toot.community",
+      "Mastodon (mastodon.social)",
+      "Gitea",
+      "Pixelfed (pixel.tchncs.de)",
+      "Mastodon (mastodon.world)",
+      "Bear Blog",
+      "Chordie",
+      "Mastodon (toot.community + ieji.de)",
+      "Multiple",
+      "Mastodon (masto.nu)",
+      "Mastodon (mstdn.ca)",
+      "Funkwhale (open.audio)",
+      "Mastodon (ieji.de)",
+      "Pixelfed",
+      "Mastodon (mstdn.social)",
+      "Mastodon (toot.community)",
+      "Matrix",
+      "BookWyrm",
+      "Dev.to",
+      "Write.as"
     ],
     "recent_posts": [
-      {
-        "date": "2026-03-27",
-        "platform": "Lemmy",
-        "title": "Alex Rivera engagement: 9 upvotes + 1 comment on beginner guitar thread",
-        "url": "https://lemmy.org/comment/5876552",
-        "project": "ChordRoom"
-      },
       {
         "date": "2026-03-27",
         "platform": "Mastodon (mastodon.world)",
@@ -293,6 +286,13 @@
         "title": "Post: jazz-chords",
         "url": "https://mastodon.social/@sarahchenmusic/116310355217865055",
         "project": "engagement"
+      },
+      {
+        "date": "2026-03-29",
+        "platform": "BookWyrm",
+        "title": "Status: 'Pumping Nylon' by Scott Tennant is still THE classical guit...",
+        "url": "https://bookwyrm.social/user/quickbitesdev",
+        "project": "general"
       }
     ]
   },
@@ -416,6 +416,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 4403 -> 79"
+    "ChordRoom visitors: 79 -> 76"
   ]
 }
