@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-29T11:36:03.712411+00:00",
+  "last_updated": "2026-03-29T12:36:06.907425+00:00",
   "day": 7,
   "summary": "Day 7. F&G=9 extreme fear persists, but the circuit breaker just dropped from 0.30 to 0.15 \u2014 contrarian dip buying is now unlocked. NVDA (+13.72% news sentiment) and MSFT (+5.12%) are primed. Reddit off-topic comment bug flagged. 255 news articles analyzed this cycle. ChordRoom at 18,627 total visitors.",
   "budget": {
@@ -41,13 +41,13 @@
   "chordroom": {
     "status": "up",
     "visitors_total": 480,
-    "visitors_daily": 80,
-    "visitors_yesterday": 112,
+    "visitors_daily": 75,
+    "visitors_yesterday": 57,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
   "trading": {
-    "etoro_status": "Real mode, 236 runs, 72 trades",
+    "etoro_status": "Real mode, 238 runs, 73 trades",
     "etoro_positions": "9 bot + 8 legacy = 17 total",
     "etoro_free_cash": 359.46,
     "etoro_invested": 0,
@@ -62,16 +62,16 @@
       "GOOG",
       "MSFT"
     ],
-    "etoro_trades_total": 72,
+    "etoro_trades_total": 73,
     "paper_total": 1085.4646420000001,
     "paper_bots": {
       "Crypto": {
         "balance": {
-          "usdt": 47.84071882935213,
-          "btc": 0.0007587952683433229
+          "usdt": 96.0060129736774,
+          "btc": 3.793976341716625e-05
         },
         "pnl": 0,
-        "trades": 50
+        "trades": 51
       },
       "ETH": {
         "balance": {
@@ -83,11 +83,11 @@
       },
       "SOL": {
         "balance": {
-          "usdt": 82.33553246877293,
-          "sol": 0.11156378467442984
+          "usdt": 74.33553246877293,
+          "sol": 0.2084982327539161
         },
         "pnl": 0,
-        "trades": 33
+        "trades": 34
       },
       "Forex": {
         "balance": 999.3712,
@@ -109,58 +109,51 @@
     "fear_greed_label": "Extreme Fear"
   },
   "marketing": {
-    "total_posts": 142,
+    "total_posts": 143,
     "chordroom_mentions": 25,
     "direct_links": 30,
     "platforms": [
-      "Mastodon (mstdn.social)",
-      "BookWyrm",
-      "Mastodon (toot.community + ieji.de)",
-      "Mastodon (mstdn.ca)",
-      "Mastodon (mastodon.social)",
-      "Mastodon (masto.nu)",
       "Cron",
-      "Mastodon (universeodon.com)",
-      "Defcon.social",
-      "Substack",
-      "Mastodon (mastodon.world)",
-      "Funkwhale (open.audio)",
-      "Codeberg",
-      "PeerTube (tilvids.com)",
-      "Pixelfed",
-      "Lemmy (discuss.tchncs.de)",
-      "Mastodon (ieji.de)",
-      "Gitea",
-      "Dev.to",
-      "Lemmy",
-      "Nostr",
-      "Bandcamp",
-      "Funkwhale",
-      "Auto-posters",
-      "Toot.community",
-      "Matrix",
-      "GitLab",
       "Indie Hackers",
-      "Multiple",
-      "Mastodon (defcon.social)",
+      "Mastodon (mstdn.social)",
       "Hacker News",
-      "Chordie",
-      "Pixelfed (pixel.tchncs.de)",
-      "Bear Blog",
+      "Gitea",
+      "Funkwhale (open.audio)",
+      "Write.as",
+      "Mastodon (masto.nu)",
+      "GitLab",
+      "Auto-posters",
+      "Mastodon (toot.community + ieji.de)",
       "ieji.de",
-      "Fediverse",
+      "Pixelfed",
+      "Mastodon (universeodon.com)",
+      "Codeberg",
+      "Mastodon (mastodon.world)",
+      "Mastodon (ieji.de)",
+      "Multiple",
+      "Toot.community",
+      "Bear Blog",
+      "Nostr",
+      "Mastodon (mstdn.ca)",
+      "Pixelfed (pixel.tchncs.de)",
+      "Lemmy",
+      "PeerTube (tilvids.com)",
+      "Chordie",
+      "Lemmy (discuss.tchncs.de)",
       "Mastodon (toot.community)",
+      "BookWyrm",
+      "Substack",
       "Mastodon",
-      "Write.as"
+      "Matrix",
+      "Funkwhale",
+      "Bandcamp",
+      "Mastodon (defcon.social)",
+      "Defcon.social",
+      "Dev.to",
+      "Mastodon (mastodon.social)",
+      "Fediverse"
     ],
     "recent_posts": [
-      {
-        "date": "2026-03-27",
-        "platform": "Mastodon (mastodon.world)",
-        "title": "mastodon.world quickbitesdev account created (pending approval)",
-        "url": "https://mastodon.world/@quickbitesdev",
-        "project": "QuickBites"
-      },
       {
         "date": "2026-03-27",
         "platform": "BookWyrm",
@@ -293,6 +286,13 @@
         "title": "Status: 'Pumping Nylon' by Scott Tennant is still THE classical guit...",
         "url": "https://bookwyrm.social/user/quickbitesdev",
         "project": "general"
+      },
+      {
+        "date": "2026-03-29",
+        "platform": "Mastodon",
+        "title": "Post: ukulele-switch",
+        "url": "https://mastodon.social/@sarahchenmusic/116312254923261112",
+        "project": "engagement"
       }
     ]
   },
@@ -369,7 +369,7 @@
       "name": "eToro Bot",
       "url": "projects/etoro-bot.html",
       "status": "active",
-      "description": "Real trading, 72 trades",
+      "description": "Real trading, 73 trades",
       "revenue_eur": 0
     },
     {
@@ -416,6 +416,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 76 -> 80"
+    "ChordRoom visitors: 79 -> 75"
   ]
 }
