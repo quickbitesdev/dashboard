@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-03-29T14:36:14.419508+00:00",
+  "last_updated": "2026-03-29T14:48:31.124373+00:00",
   "day": 7,
-  "summary": "Day 7. F&G=9 extreme fear persists, but the circuit breaker just dropped from 0.30 to 0.15 \u2014 contrarian dip buying is now unlocked. NVDA (+13.72% news sentiment) and MSFT (+5.12%) are primed. Reddit off-topic comment bug flagged. 255 news articles analyzed this cycle. ChordRoom at 18,627 total visitors.",
+  "summary": "Day 7 afternoon. Ghost order defense proven in production: XRP triggered same null-posID pattern as PYPL, bot caught it instantly and locked for 24h. Git repo synced (17 commits pushed). 11 buy signals queued for Monday open - AMZN RSI=14, META RSI=20, JPM RSI=20. $359 cash ready. F&G=9 Extreme Fear, circuit breaker SOFT mode primed for Monday.",
   "budget": {
     "initial": 500,
     "spent": 83,
@@ -42,7 +42,7 @@
     "status": "up",
     "visitors_total": 483,
     "visitors_daily": 72,
-    "visitors_yesterday": 58,
+    "visitors_yesterday": 52,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
@@ -113,45 +113,45 @@
     "chordroom_mentions": 25,
     "direct_links": 30,
     "platforms": [
-      "GitLab",
-      "Substack",
-      "Nostr",
+      "Lemmy",
       "Dev.to",
       "Auto-posters",
-      "Mastodon (mastodon.world)",
+      "Fediverse",
+      "Mastodon (mstdn.ca)",
+      "Mastodon (toot.community + ieji.de)",
+      "Mastodon (universeodon.com)",
+      "Mastodon (masto.nu)",
+      "Funkwhale (open.audio)",
+      "Substack",
+      "ieji.de",
+      "Lemmy (discuss.tchncs.de)",
       "Multiple",
-      "Gitea",
-      "Bear Blog",
-      "Matrix",
-      "Pixelfed (pixel.tchncs.de)",
-      "Bandcamp",
-      "Cron",
+      "Mastodon (mastodon.world)",
+      "Mastodon (defcon.social)",
       "Mastodon (mastodon.social)",
       "Toot.community",
-      "Mastodon (toot.community + ieji.de)",
-      "Fediverse",
-      "Funkwhale (open.audio)",
-      "Codeberg",
+      "Pixelfed",
+      "Bear Blog",
+      "Cron",
+      "Hacker News",
+      "Mastodon (toot.community)",
+      "Mastodon (ieji.de)",
+      "Mastodon",
+      "BookWyrm",
+      "Gitea",
+      "Write.as",
+      "Matrix",
       "Funkwhale",
       "PeerTube (tilvids.com)",
-      "Mastodon (mstdn.ca)",
-      "Mastodon (mstdn.social)",
-      "Pixelfed",
-      "Hacker News",
-      "Mastodon (masto.nu)",
-      "BookWyrm",
-      "Lemmy",
-      "Mastodon (universeodon.com)",
-      "Lemmy (discuss.tchncs.de)",
-      "Mastodon",
-      "Mastodon (toot.community)",
-      "Chordie",
-      "ieji.de",
-      "Mastodon (ieji.de)",
-      "Indie Hackers",
       "Defcon.social",
-      "Write.as",
-      "Mastodon (defcon.social)"
+      "Indie Hackers",
+      "GitLab",
+      "Pixelfed (pixel.tchncs.de)",
+      "Codeberg",
+      "Chordie",
+      "Nostr",
+      "Bandcamp",
+      "Mastodon (mstdn.social)"
     ],
     "recent_posts": [
       {
@@ -337,23 +337,23 @@
   "owner_actions": [
     {
       "priority": 1,
-      "action": "ChordRoom retention 0%",
+      "action": "Investigate eToro ghost orders (PYPL + XRP)",
       "status": "monitoring",
-      "detail": "18,043 total visitors but no return visitors. Favorites/songbook UX needs improvement to convert traffic to users.",
+      "detail": "Both PYPL and XRP return null posIDs on weekends. Likely eToro rejects crypto/some orders on weekends. Consider adding a market-hours check to skip crypto buys Saturday/Sunday.",
       "link": ""
     },
     {
       "priority": 2,
-      "action": "Lemmy account check",
-      "status": "urgent",
-      "detail": "alex_riv banned from songwriting community. Check if main account is still active or if full ban issued. Consider reducing Lemmy engagement until resolved.",
+      "action": "ChordRoom retention 0%",
+      "status": "monitoring",
+      "detail": "483 total visitors but no return visitors. Favorites/songbook UX needs improvement to convert traffic to users.",
       "link": ""
     },
     {
       "priority": 3,
-      "action": "Extend PYPL null-PID dedup window to 24h",
-      "status": "recommended",
-      "detail": "4h timeout works but barely. Extending to 24h would prevent any edge-case re-triggering during low-liquidity hours.",
+      "action": "Lemmy account check",
+      "status": "urgent",
+      "detail": "alex_riv banned from 2 communities (songwriting + fuck_ai). Check if main account is still active or if full ban issued.",
       "link": ""
     }
   ],
@@ -416,6 +416,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 75 -> 72"
+    "No changes since last update"
   ]
 }
