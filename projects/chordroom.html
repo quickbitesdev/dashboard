@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChordRoom — Money-Maker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d1117; --surface: #161b22; --border: #30363d;
+      --text: #e6edf3; --muted: #8b949e; --green: #00ff88;
+      --red: #ff4444; --yellow: #ffaa00; --blue: #58a6ff;
+      --font: 'JetBrains Mono', 'Courier New', monospace;
+    }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 13px; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 24px; }
+    .back { color: var(--muted); text-decoration: none; font-size: 12px; display: inline-block; margin-bottom: 24px; }
+    .back:hover { color: var(--green); }
+    h1 { font-size: 28px; font-weight: 700; color: var(--green); margin-bottom: 8px; }
+    .status { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; margin-bottom: 24px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+    .card h2 { font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; }
+    .stat-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); }
+    .stat-row:last-child { border-bottom: none; }
+    .stat-label { color: var(--muted); font-size: 12px; }
+    .stat-val { font-weight: 600; }
+    .green { color: var(--green); }
+    .yellow { color: var(--yellow); }
+    .blue { color: var(--blue); }
+    p { margin-bottom: 12px; color: var(--muted); }
+    a.ext { color: var(--blue); text-decoration: none; }
+    a.ext:hover { text-decoration: underline; }
+    ul { margin: 8px 0 8px 20px; color: var(--muted); }
+    li { margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">&larr; Back to Dashboard</a>
+    <h1>ChordRoom</h1>
+    <div class="status"><div class="dot"></div><span class="green">LIVE</span></div>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p>Free guitar and piano chords & lyrics site with 260,578+ songs, 14,283 artist pages, 921 genre pages, and more. Server-side rendered for SEO with 275k+ indexable pages.</p>
+      <p>Site: <a class="ext" href="https://chordroom.com" target="_blank">chordroom.com</a></p>
+    </div>
+
+    <div class="card">
+      <h2>Key Metrics</h2>
+      <div class="stat-row"><span class="stat-label">Total Songs</span><span class="stat-val">260,578</span></div>
+      <div class="stat-row"><span class="stat-label">Artist Pages</span><span class="stat-val">14,283</span></div>
+      <div class="stat-row"><span class="stat-label">Genre Pages</span><span class="stat-val">921</span></div>
+      <div class="stat-row"><span class="stat-label">Revenue</span><span class="stat-val green">EUR 3.00</span></div>
+      <div class="stat-row"><span class="stat-label">Monetization</span><span class="stat-val">Stripe Donation (EUR 3)</span></div>
+      <div class="stat-row"><span class="stat-label">Analytics</span><span class="stat-val">GoatCounter</span></div>
+    </div>
+
+    <div class="card">
+      <h2>Tech Stack</h2>
+      <ul>
+        <li>Node.js / Express backend with SSR</li>
+        <li>Apache reverse proxy</li>
+        <li>IndexNow for Bing/Yandex indexing</li>
+        <li>JSON-LD structured data on all pages</li>
+        <li>GoatCounter analytics</li>
+        <li>Stripe for donations</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>SEO Strategy</h2>
+      <ul>
+        <li>275k+ SSR pages with unique titles, meta descriptions, OG tags</li>
+        <li>Dynamic sitemap index (11 sitemaps, 50k URLs each)</li>
+        <li>Internal linking between songs, artists, genres, decades, languages</li>
+        <li>IndexNow daily submission of 250 URLs</li>
+        <li>Long-tail keywords: "[Song] [Artist] Chords"</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

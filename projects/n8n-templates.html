@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>n8n AI Workflows — Money-Maker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d1117; --surface: #161b22; --border: #30363d;
+      --text: #e6edf3; --muted: #8b949e; --green: #00ff88;
+      --red: #ff4444; --yellow: #ffaa00; --blue: #58a6ff;
+      --font: 'JetBrains Mono', 'Courier New', monospace;
+    }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 13px; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 24px; }
+    .back { color: var(--muted); text-decoration: none; font-size: 12px; display: inline-block; margin-bottom: 24px; }
+    .back:hover { color: var(--green); }
+    h1 { font-size: 28px; font-weight: 700; color: var(--green); margin-bottom: 8px; }
+    .status { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; margin-bottom: 24px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
+    .green { color: var(--green); }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+    .card h2 { font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; }
+    p { margin-bottom: 12px; color: var(--muted); }
+    ul { margin: 8px 0 8px 20px; color: var(--muted); }
+    li { margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">&larr; Back to Dashboard</a>
+    <h1>n8n AI Workflows</h1>
+    <div class="status"><div class="dot"></div><span class="green">LIVE</span></div>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p>11 production-ready n8n workflow templates that use Ollama for self-hosted AI. Zero API costs, complete privacy, no rate limits.</p>
+    </div>
+
+    <div class="card">
+      <h2>Included Workflows</h2>
+      <ul>
+        <li>AI Blog Writer Pipeline</li>
+        <li>AI Social Media Content Generator</li>
+        <li>AI YouTube-to-Newsletter Pipeline</li>
+        <li>AI Multi-Platform Content Repurposer</li>
+        <li>AI Lead Scoring & Enrichment</li>
+        <li>AI Competitor Intelligence Monitor</li>
+        <li>AI Email Auto-Responder</li>
+        <li>AI Support Ticket Router</li>
+        <li>AI Document Summarizer</li>
+        <li>AI Meeting Notes Summarizer</li>
+        <li>AI Data Extractor</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Requirements</h2>
+      <ul>
+        <li>n8n (self-hosted, v1.0+)</li>
+        <li>Ollama running on localhost:11434</li>
+        <li>Any Ollama model (llama3:8b recommended)</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

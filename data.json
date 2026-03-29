@@ -1,0 +1,421 @@
+{
+  "last_updated": "2026-03-29T08:35:00+00:00",
+  "day": 7,
+  "summary": "Day 7. F&G=9 extreme fear persists, but the circuit breaker just dropped from 0.30 to 0.15 \u2014 contrarian dip buying is now unlocked. NVDA (+13.72% news sentiment) and MSFT (+5.12%) are primed. Reddit off-topic comment bug flagged. 255 news articles analyzed this cycle. ChordRoom at 18,627 total visitors.",
+  "budget": {
+    "initial": 500,
+    "spent": 83,
+    "remaining": 417,
+    "revenue": 3.0,
+    "profit": -80.0,
+    "expenses": [
+      {
+        "date": "2026-03-22",
+        "amount": 14,
+        "item": "usesnapapi.com domain"
+      },
+      {
+        "date": "2026-03-22",
+        "amount": 14,
+        "item": "unstableentity.com domain"
+      },
+      {
+        "date": "2026-03-23",
+        "amount": 50,
+        "item": "Wise Business account fee"
+      },
+      {
+        "date": "2026-03-26",
+        "amount": 5,
+        "item": "Mullvad VPN (1 month)"
+      }
+    ],
+    "revenue_items": [
+      {
+        "date": "2026-03-25",
+        "amount": 3.0,
+        "source": "ChordRoom Stripe donation"
+      }
+    ]
+  },
+  "chordroom": {
+    "status": "up",
+    "visitors_total": 19683,
+    "visitors_daily": 4403,
+    "visitors_yesterday": 6703,
+    "registered_users": 2,
+    "revenue_eur": 3.0
+  },
+  "trading": {
+    "etoro_status": "Real mode, 236 runs, 72 trades",
+    "etoro_positions": "9 bot + 8 legacy = 17 total",
+    "etoro_free_cash": 359.46,
+    "etoro_invested": 0,
+    "etoro_symbols": [
+      "AAPL",
+      "META",
+      "AMZN",
+      "JPM",
+      "NVDA",
+      "AMD",
+      "BTC",
+      "GOOG",
+      "MSFT"
+    ],
+    "etoro_trades_total": 72,
+    "paper_total": 1085.4646420000001,
+    "paper_bots": {
+      "Crypto": {
+        "balance": {
+          "usdt": 80.89071882935212,
+          "btc": 0.0002624463986145517
+        },
+        "pnl": 0,
+        "trades": 48
+      },
+      "ETH": {
+        "balance": {
+          "usdt": 82.90512500672416,
+          "eth": 0.006853127727972774
+        },
+        "pnl": 0,
+        "trades": 43
+      },
+      "SOL": {
+        "balance": {
+          "usdt": 82.33553246877293,
+          "sol": 0.11156378467442984
+        },
+        "pnl": 0,
+        "trades": 33
+      },
+      "Forex": {
+        "balance": 999.3712,
+        "pnl": -0.6288,
+        "trades": 6
+      },
+      "Sentiment": {
+        "balance": 86.093442,
+        "pnl": 0,
+        "trades": 8
+      }
+    }
+  },
+  "market": {
+    "btc": 66519,
+    "eth": 2003,
+    "sol": 82.37,
+    "fear_greed": 9,
+    "fear_greed_label": "Extreme Fear"
+  },
+  "marketing": {
+    "total_posts": 141,
+    "chordroom_mentions": 25,
+    "direct_links": 30,
+    "platforms": [
+      "Bear Blog",
+      "Mastodon (mastodon.social)",
+      "PeerTube (tilvids.com)",
+      "Cron",
+      "Mastodon (mstdn.social)",
+      "Matrix",
+      "Write.as",
+      "Substack",
+      "Mastodon (defcon.social)",
+      "Mastodon",
+      "BookWyrm",
+      "Mastodon (mstdn.ca)",
+      "Chordie",
+      "Funkwhale",
+      "Auto-posters",
+      "Toot.community",
+      "Nostr",
+      "Mastodon (toot.community + ieji.de)",
+      "Gitea",
+      "Fediverse",
+      "Multiple",
+      "Mastodon (ieji.de)",
+      "Lemmy (discuss.tchncs.de)",
+      "Bandcamp",
+      "Defcon.social",
+      "Funkwhale (open.audio)",
+      "Mastodon (universeodon.com)",
+      "Indie Hackers",
+      "Lemmy",
+      "Codeberg",
+      "ieji.de",
+      "GitLab",
+      "Mastodon (toot.community)",
+      "Pixelfed (pixel.tchncs.de)",
+      "Hacker News",
+      "Mastodon (mastodon.world)",
+      "Dev.to",
+      "Pixelfed",
+      "Mastodon (masto.nu)"
+    ],
+    "recent_posts": [
+      {
+        "date": "2026-03-27",
+        "platform": "Lemmy",
+        "title": "Alex Rivera engagement: 9 upvotes + 1 comment on beginner guitar thread",
+        "url": "https://lemmy.org/comment/5876552",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-27",
+        "platform": "Mastodon (mastodon.world)",
+        "title": "mastodon.world quickbitesdev account created (pending approval)",
+        "url": "https://mastodon.world/@quickbitesdev",
+        "project": "QuickBites"
+      },
+      {
+        "date": "2026-03-27",
+        "platform": "BookWyrm",
+        "title": "Status: Reading 'Music Theory for Guitarists' by Tom Kolb. Love that...",
+        "url": "https://bookwyrm.social/user/quickbitesdev",
+        "project": "general"
+      },
+      {
+        "date": "2026-03-27",
+        "platform": "Mastodon (mstdn.ca)",
+        "title": "quickbitesdev account created on mstdn.ca \u2014 fully active",
+        "url": "https://mstdn.ca/@quickbitesdev",
+        "project": "QuickBites"
+      },
+      {
+        "date": "2026-03-27",
+        "platform": "Mastodon (mstdn.ca)",
+        "title": "Intro post on mstdn.ca",
+        "url": "https://mstdn.ca/@quickbitesdev/116302264621455739",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-27",
+        "platform": "Dev.to",
+        "title": "Comment on: Spotify Has a Free API \u2014 Search Tracks, Get Playlists, and Analyze Audio Features (No Premium Needed)",
+        "url": "https://dev.to/0012303/spotify-has-a-free-api-search-tracks-get-playlists-and-analyze-audio-features-no-premium-8n3",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-27",
+        "platform": "Mastodon",
+        "title": "Sarah Chen capo tip post",
+        "url": "https://mastodon.social/@sarahchenmusic/116302213005025476",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-27",
+        "platform": "Mastodon",
+        "title": "Engagement: favourited 12 music posts (#blues #indiemusic #musictheory #songwriting #guitartok #jazz)",
+        "url": "",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-27",
+        "platform": "Defcon.social",
+        "title": "Engagement: favourited 9 tech posts (#devops #webdev #opensource)",
+        "url": "",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-27",
+        "platform": "Pixelfed",
+        "title": "Engagement: favourited 4 music posts (#chords #practice)",
+        "url": "",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-27",
+        "platform": "Lemmy",
+        "title": "Engagement: upvoted 3 strumming/guitar posts + banned community fix",
+        "url": "",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-27",
+        "platform": "Dev.to",
+        "title": "Commenter FIXED: 2 comments posted via web session auth",
+        "url": "",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-27",
+        "platform": "Pixelfed",
+        "title": "pixelfed_poster.py created \u2014 engagement-only (posting needs media)",
+        "url": "",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-28",
+        "platform": "Dev.to",
+        "title": "How I Built a 30-Minute Guitar Practice Routine That Actually Works",
+        "url": "https://dev.to/workflowforge/how-i-built-a-30-minute-guitar-practice-routine-that-actually-works-313k",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-28",
+        "platform": "Mastodon",
+        "title": "Post: capo-tip",
+        "url": "https://mastodon.social/@sarahchenmusic/116308282410179949",
+        "project": "engagement"
+      },
+      {
+        "date": "2026-03-28",
+        "platform": "Lemmy",
+        "title": "Post: chordroom-indie-chords",
+        "url": "https://lemmy.org/post/4883997",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-28",
+        "platform": "BookWyrm",
+        "title": "Status: Been pairing my reading with actual practice \u2014 look up the c...",
+        "url": "https://bookwyrm.social/user/quickbitesdev",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-28",
+        "platform": "Lemmy",
+        "title": "Post: chordroom-indie-chords",
+        "url": "https://lemmy.org/post/4885241",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-28",
+        "platform": "BookWyrm",
+        "title": "Status: Been pairing my reading with actual practice \u2014 look up the c...",
+        "url": "https://bookwyrm.social/user/quickbitesdev",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-29",
+        "platform": "Mastodon",
+        "title": "Post: jazz-chords",
+        "url": "https://mastodon.social/@sarahchenmusic/116310355217865055",
+        "project": "engagement"
+      }
+    ]
+  },
+  "issues": [
+    {
+      "title": "F&G=9 Extreme Fear \u2014 $359 dry powder ready for Monday open",
+      "detail": "AAPL signal 0.31 is strongest unblocked candidate"
+    },
+    {
+      "title": "GitHub Pages dashboard 404 \u2014 quickbitesdev.github.io/dashboard/ down",
+      "detail": "Local dashboard OK, public page needs investigation"
+    },
+    {
+      "title": "eToro 18.5% win rate \u2014 market conditions brutal, stop-losses doing correct job",
+      "detail": ""
+    },
+    {
+      "title": "BTC/ETH/SOL crash \u2014 crypto paper bots slightly underwater",
+      "detail": ""
+    },
+    {
+      "title": "Chordie Forum bot detection active (404 on posts)",
+      "detail": ""
+    },
+    {
+      "title": "Funkwhale password lost \u2014 reset email not delivered",
+      "detail": ""
+    },
+    {
+      "title": "defcon.social account disabled (403)",
+      "detail": ""
+    },
+    {
+      "title": "Mastodon cross-persona self-engagement \u2014 may be favouriting own accounts",
+      "detail": "Self-engagement filter needs cross-persona scope expansion"
+    }
+  ],
+  "owner_actions": [
+    {
+      "priority": 1,
+      "action": "ChordRoom retention 0%",
+      "status": "monitoring",
+      "detail": "18,043 total visitors but no return visitors. Favorites/songbook UX needs improvement to convert traffic to users.",
+      "link": ""
+    },
+    {
+      "priority": 2,
+      "action": "Lemmy account check",
+      "status": "urgent",
+      "detail": "alex_riv banned from songwriting community. Check if main account is still active or if full ban issued. Consider reducing Lemmy engagement until resolved.",
+      "link": ""
+    },
+    {
+      "priority": 3,
+      "action": "Extend PYPL null-PID dedup window to 24h",
+      "status": "recommended",
+      "detail": "4h timeout works but barely. Extending to 24h would prevent any edge-case re-triggering during low-liquidity hours.",
+      "link": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "ChordRoom",
+      "url": "projects/chordroom.html",
+      "status": "up",
+      "description": "260k+ songs chord database",
+      "revenue_eur": 3.0
+    },
+    {
+      "name": "eToro Bot",
+      "url": "projects/etoro-bot.html",
+      "status": "active",
+      "description": "Real trading, 72 trades",
+      "revenue_eur": 0
+    },
+    {
+      "name": "Paper Bots",
+      "url": "projects/paper-bots.html",
+      "status": "active",
+      "description": "ETH/SOL/BTC/Sentiment/Forex",
+      "revenue_eur": 0
+    },
+    {
+      "name": "Forum Bots",
+      "url": "projects/forum-bots.html",
+      "status": "active",
+      "description": "Auto-posters & personas",
+      "revenue_eur": 0
+    },
+    {
+      "name": "n8n Templates",
+      "url": "projects/n8n-templates.html",
+      "status": "active",
+      "description": "AI workflow templates",
+      "revenue_eur": 0
+    },
+    {
+      "name": "QuickMailBites",
+      "url": "projects/quickmailbites.html",
+      "status": "pre-launch",
+      "description": "Desktop email client with S3",
+      "revenue_eur": 0
+    },
+    {
+      "name": "AI Recipes",
+      "url": "projects/ai-recipes.html",
+      "status": "active",
+      "description": "Recipe video content",
+      "revenue_eur": 0
+    },
+    {
+      "name": "Docker Templates",
+      "url": "projects/docker-templates.html",
+      "status": "active",
+      "description": "Docker stacks",
+      "revenue_eur": 0
+    }
+  ],
+  "changes": [
+    "SnapAPI restarted: 503 -> 200 OK, 30-min auto-restart added",
+    "Lemmy disabled: alex_riv retired before full account ban",
+    "Nostr relay replaced: relay.nostr.band -> relay.primal.net",
+    "eToro runs: 235 -> 236",
+    "PYPL ghost: confirmed non-blocking (4h timeout handles it)"
+  ]
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eToro Bot — Money-Maker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d1117; --surface: #161b22; --border: #30363d;
+      --text: #e6edf3; --muted: #8b949e; --green: #00ff88;
+      --red: #ff4444; --yellow: #ffaa00; --blue: #58a6ff;
+      --font: 'JetBrains Mono', 'Courier New', monospace;
+    }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 13px; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 24px; }
+    .back { color: var(--muted); text-decoration: none; font-size: 12px; display: inline-block; margin-bottom: 24px; }
+    .back:hover { color: var(--green); }
+    h1 { font-size: 28px; font-weight: 700; color: var(--green); margin-bottom: 8px; }
+    .status { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; margin-bottom: 24px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+    .card h2 { font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; }
+    .stat-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); }
+    .stat-row:last-child { border-bottom: none; }
+    .stat-label { color: var(--muted); font-size: 12px; }
+    .stat-val { font-weight: 600; }
+    .green { color: var(--green); }
+    .red { color: var(--red); }
+    .blue { color: var(--blue); }
+    p { margin-bottom: 12px; color: var(--muted); }
+    ul { margin: 8px 0 8px 20px; color: var(--muted); }
+    li { margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">&larr; Back to Dashboard</a>
+    <h1>eToro Bot</h1>
+    <div class="status"><div class="dot"></div><span class="green">LIVE</span></div>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p>Automated trading bot running on eToro with real funds. Uses momentum and technical analysis strategies to open and close positions. Operates with strict risk management: $10 per trade, max 5 bot positions.</p>
+    </div>
+
+    <div class="card">
+      <h2>Configuration</h2>
+      <div class="stat-row"><span class="stat-label">Mode</span><span class="stat-val green">REAL</span></div>
+      <div class="stat-row"><span class="stat-label">Trade Size</span><span class="stat-val">$10</span></div>
+      <div class="stat-row"><span class="stat-label">Max Positions</span><span class="stat-val">5</span></div>
+      <div class="stat-row"><span class="stat-label">Rotation Limit</span><span class="stat-val">1 per run</span></div>
+    </div>
+
+    <div class="card">
+      <h2>Strategy</h2>
+      <ul>
+        <li>Momentum-based stock/crypto selection</li>
+        <li>Fear & Greed Index integration</li>
+        <li>Automatic position rotation on signal changes</li>
+        <li>Stop-loss and take-profit management</li>
+        <li>Runs on cron schedule</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Rules</h2>
+      <ul>
+        <li>MAY sell: DIS, VOW3.DE, LUMN, 0700.HK (owner-approved losers)</li>
+        <li>DO NOT sell: NIO, FIL, 1INCH, GRT, SHIBxM, AAPL, GOOG, MSFT</li>
+        <li>Never switch away from eToro</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

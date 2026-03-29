@@ -1,0 +1,97 @@
+{
+  "last_updated": "2026-03-27T17:15:00+02:00",
+  "day": 5,
+  "summary": "Reporter run 17:15 EET. All services UP. Market crash continues: BTC $66,056 (-4.9%), ETH $1,985 (-4.4%), SOL $83 (-5.2%). F&G=13 Extreme Fear. eToro at HARD CAP 8/8, circuit breaker blocking low-conviction buys. Auto-posters active. 93 marketing entries logged.",
+  "chordroom": {
+    "status": "up",
+    "visitors_total": 0,
+    "visitors_daily": 0,
+    "revenue_eur": 3.0
+  },
+  "trading": {
+    "etoro_status": "ACTIVE — hard cap 8/8 positions, circuit breaker ON (F&G=13), no new buys",
+    "etoro_positions": "8 bot + 7 legacy = 15 total",
+    "etoro_realized_pnl": -6.11,
+    "etoro_win_rate": "23.8% (5W/16L)",
+    "etoro_open": ["BA", "BTC", "CRM", "ETH", "GOOG", "MSFT", "TSLA", "XRP"],
+    "etoro_free_cash": 293.46,
+    "etoro_total_runs": 204,
+    "paper_total": 1475.26,
+    "paper_bots": {
+      "ETH": 94.92,
+      "SOL": 91.52,
+      "Crypto": 97.07,
+      "Sentiment": 192.38,
+      "Forex": 999.37
+    }
+  },
+  "market": {
+    "btc": 66056,
+    "eth": 1985,
+    "sol": 83,
+    "fear_greed": 13,
+    "fear_greed_label": "Extreme Fear",
+    "eur_usd": 1.15439,
+    "gbp_usd": 1.33403,
+    "usd_jpy": 159.60
+  },
+  "marketing": {
+    "total_posts": 93,
+    "chordroom_mentions": 25,
+    "direct_links": 30,
+    "platforms": [
+      "Mastodon (6 instances)",
+      "Dev.to",
+      "Chordie Forum",
+      "Hacker News",
+      "Lemmy.org",
+      "Lemmy.world",
+      "Indie Hackers",
+      "Funkwhale",
+      "GitLab",
+      "Neocities",
+      "Codeberg",
+      "Write.as",
+      "Nostr",
+      "BookWyrm",
+      "defcon.social",
+      "n8n Community"
+    ],
+    "milestones": [
+      "Mastodon engagement: favouriting #folkmusic, #songwriting, #fingerstyle, #guitar, #indiehacker, #staticsite, #python, #opensource",
+      "Lemmy engagement: upvoting guitar/music/tech posts",
+      "Defcon.social: engagement across #staticsite, #python, #opensource",
+      "Dev.to: 6 articles published, commenter rate limited",
+      "Sitemap pinger: 3 lifetime pings to search engines",
+      "eToro circuit breaker protecting from extreme fear buys"
+    ]
+  },
+  "issues": [
+    "F&G=13 Extreme Fear — BTC -4.9%, ETH -4.4%, SOL -5.2%",
+    "eToro realized PnL -$6.11 — mostly stop-loss casualties from crash",
+    "eToro at HARD CAP 8/8 — multiple stoplosses freed positions but refilled",
+    "techhub.social, social.linux.pizza confirmation blocked",
+    "Chordie Forum bot detection active (404 on posts)",
+    "ChordRoom 0% retention — biggest product problem",
+    "Google Search Console verification still blocked",
+    "Funkwhale password lost — reset email not delivered",
+    "Dev.to commenter global API endpoint dead (404)"
+  ],
+  "owner_actions": [
+    {
+      "priority": 1,
+      "action": "Google Search Console verification",
+      "status": "blocked"
+    },
+    {
+      "priority": 2,
+      "action": "ChordRoom retention 0%",
+      "status": "monitoring"
+    },
+    {
+      "priority": 3,
+      "action": "Review eToro stop-loss settings",
+      "status": "monitoring"
+    }
+  ]
+}

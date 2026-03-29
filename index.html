@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money-Maker Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --green: #00ff88;
+      --red: #ff4444;
+      --yellow: #ffaa00;
+      --blue: #58a6ff;
+      --font: 'JetBrains Mono', 'Courier New', monospace;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 13px;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: -0.5px;
+    }
+    .badge {
+      background: #1f2937;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 12px;
+      color: var(--blue);
+      font-weight: 600;
+    }
+    .header-meta {
+      margin-left: auto;
+      color: var(--muted);
+      font-size: 11px;
+    }
+    .header-meta span { color: var(--text); }
+
+    /* ── Layout ── */
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* ── Section titles ── */
+    .section-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    /* ── Grid ── */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 900px) {
+      .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    /* ── Card ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .card-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+    }
+    .card-value {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .card-sub {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ── Status dot ── */
+    .status-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot-green { background: var(--green); box-shadow: 0 0 6px var(--green); }
+    .dot-red   { background: var(--red);   box-shadow: 0 0 6px var(--red); }
+    .dot-yellow{ background: var(--yellow);box-shadow: 0 0 6px var(--yellow); }
+
+    .green { color: var(--green); }
+    .red   { color: var(--red); }
+    .yellow{ color: var(--yellow); }
+    .blue  { color: var(--blue); }
+    .muted { color: var(--muted); }
+
+    /* ── Stat row inside card ── */
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-row:last-child { border-bottom: none; }
+    .stat-label { color: var(--muted); font-size: 11px; }
+    .stat-val   { font-weight: 600; font-size: 13px; }
+
+    /* ── Fear & Greed gauge ── */
+    .fg-number {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--red);
+      line-height: 1;
+    }
+    .fg-label {
+      font-size: 12px;
+      color: var(--red);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* ── Pill tags ── */
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .pill {
+      background: #1f2937;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    /* ── Issues ── */
+    .issue-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      background: rgba(255, 68, 68, 0.06);
+      border: 1px solid rgba(255, 68, 68, 0.25);
+      border-radius: 6px;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+    .issue-item:last-child { margin-bottom: 0; }
+    .issue-icon { color: var(--red); font-size: 14px; flex-shrink: 0; }
+    .issue-title { font-weight: 600; }
+    .issue-detail { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+    /* ── Owner actions ── */
+    .action-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .action-item:last-child { border-bottom: none; }
+    .action-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+    .action-text { flex: 1; font-size: 12px; }
+    .action-text a { color: var(--blue); text-decoration: none; }
+    .action-text a:hover { text-decoration: underline; }
+    .action-detail { font-size: 11px; color: var(--muted); margin-top: 3px; }
+    .status-badge {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+    .sb-blocked   { background: rgba(255,68,68,0.15);   color: var(--red);    border: 1px solid rgba(255,68,68,0.3); }
+    .sb-monitoring{ background: rgba(255,170,0,0.12);   color: var(--yellow); border: 1px solid rgba(255,170,0,0.3); }
+    .sb-ready     { background: rgba(0,255,136,0.10);   color: var(--green);  border: 1px solid rgba(0,255,136,0.3); }
+    .sb-bot       { background: rgba(88,166,255,0.10);  color: var(--blue);   border: 1px solid rgba(88,166,255,0.3); }
+    .sb-blocker   { background: rgba(255,68,68,0.20);   color: var(--red);    border: 1px solid rgba(255,68,68,0.4); }
+
+    /* ── Project cards ── */
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      text-decoration: none;
+      color: var(--text);
+      display: block;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .project-card:hover {
+      border-color: var(--green);
+      background: #1c2333;
+    }
+    .project-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .project-card-name {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .project-card-desc {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .project-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .project-card-revenue {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* ── Marketing posts list ── */
+    .posts-list {
+      max-height: 260px;
+      overflow-y: auto;
+      margin-top: 12px;
+    }
+    .posts-list::-webkit-scrollbar { width: 4px; }
+    .posts-list::-webkit-scrollbar-track { background: transparent; }
+    .posts-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .post-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 11px;
+    }
+    .post-row:last-child { border-bottom: none; }
+    .post-date { color: var(--muted); flex-shrink: 0; width: 70px; }
+    .post-platform {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 3px;
+      flex-shrink: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .post-title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .post-title a { color: var(--text); text-decoration: none; }
+    .post-title a:hover { color: var(--blue); text-decoration: underline; }
+    .post-project { color: var(--muted); font-size: 10px; flex-shrink: 0; }
+    .plat-mastodon  { background: rgba(99,100,255,0.2); color: #7c7dff; }
+    .plat-devto     { background: rgba(255,255,255,0.1); color: #ccc; }
+    .plat-lemmy     { background: rgba(0,150,136,0.2); color: #4db6ac; }
+    .plat-hn        { background: rgba(255,102,0,0.2); color: #ff8844; }
+    .plat-nostr     { background: rgba(128,0,255,0.2); color: #b366ff; }
+    .plat-other     { background: rgba(255,255,255,0.08); color: var(--muted); }
+
+    /* ── Error overlay ── */
+    #error-bar {
+      display: none;
+      background: rgba(255,68,68,0.1);
+      border-bottom: 1px solid rgba(255,68,68,0.3);
+      padding: 8px 24px;
+      font-size: 12px;
+      color: var(--red);
+      text-align: center;
+    }
+
+    /* ── Loading ── */
+    #loading {
+      text-align: center;
+      padding: 80px 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    #dashboard { display: none; }
+  </style>
+</head>
+<body>
+  <div id="error-bar">Failed to load data.json — showing stale data</div>
+
+  <header>
+    <h1>Money-Maker</h1>
+    <span class="badge" id="day-badge">Day —</span>
+    <div class="header-meta">Last updated: <span id="last-updated">—</span></div>
+  </header>
+
+  <div id="loading">Loading dashboard data…</div>
+
+  <main id="dashboard">
+
+    <!-- Changes since last update -->
+    <div id="changes-section" style="display:none">
+      <div class="card" style="border-color:var(--blue);border-left:3px solid var(--blue);padding:12px 16px">
+        <div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:6px">Changes since last update</div>
+        <div id="changes-list" style="font-size:12px;color:var(--muted)"></div>
+      </div>
+    </div>
+
+    <!-- Status cards -->
+    <div>
+      <div class="section-title">Status Overview</div>
+      <div class="grid-3">
+
+        <!-- ChordRoom -->
+        <div class="card" id="card-chordroom">
+          <div class="card-title">ChordRoom</div>
+          <div class="status-row">
+            <div class="dot" id="chord-dot"></div>
+            <span id="chord-status" style="font-weight:700;font-size:14px;"></span>
+          </div>
+          <div class="stat-row"><span class="stat-label">Visitors (total)</span><span class="stat-val" id="chord-vtotal"></span></div>
+          <div class="stat-row"><span class="stat-label">Visitors (daily)</span><span class="stat-val" id="chord-vdaily"></span></div>
+          <div class="stat-row"><span class="stat-label">Revenue</span><span class="stat-val green" id="chord-rev"></span></div>
+        </div>
+
+        <!-- eToro Real -->
+        <div class="card" id="card-etoro">
+          <div class="card-title">eToro Real Trading</div>
+          <div class="status-row">
+            <div class="dot dot-red"></div>
+            <span id="etoro-status-text" style="font-weight:600;font-size:11px;color:var(--red);"></span>
+          </div>
+          <div class="stat-row"><span class="stat-label">Active positions</span><span class="stat-val" id="etoro-pos"></span></div>
+          <div class="stat-row"><span class="stat-label">Total trades</span><span class="stat-val" id="etoro-trades-total"></span></div>
+          <div class="stat-row"><span class="stat-label">Free cash</span><span class="stat-val green" id="etoro-cash"></span></div>
+        </div>
+
+        <!-- Budget -->
+        <div class="card">
+          <div class="card-title">Budget</div>
+          <div class="card-value" id="budget-profit"></div>
+          <div class="card-sub" id="budget-sub"></div>
+          <div class="stat-row"><span class="stat-label">Revenue</span><span class="stat-val green" id="budget-revenue"></span></div>
+          <div class="stat-row"><span class="stat-label">Expenses</span><span class="stat-val red" id="budget-expenses"></span></div>
+          <div class="stat-row"><span class="stat-label">Remaining</span><span class="stat-val" id="budget-remaining"></span></div>
+        </div>
+
+        <!-- Paper Portfolio -->
+        <div class="card">
+          <div class="card-title">Paper Portfolio</div>
+          <div class="card-value green" id="paper-total"></div>
+          <div class="card-sub">Simulated trading portfolio</div>
+          <div class="pills" id="paper-bots"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div>
+      <div class="section-title">Projects</div>
+      <div class="grid-3" id="projects-grid"></div>
+    </div>
+
+    <!-- Market Data -->
+    <div>
+      <div class="section-title">Market Data</div>
+      <div class="grid-4">
+        <div class="card">
+          <div class="card-title">Bitcoin</div>
+          <div class="card-value" id="btc-price"></div>
+          <div class="card-sub">BTC/USD</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Ethereum</div>
+          <div class="card-value" id="eth-price"></div>
+          <div class="card-sub">ETH/USD</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Solana</div>
+          <div class="card-value" id="sol-price"></div>
+          <div class="card-sub">SOL/USD</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Fear &amp; Greed Index</div>
+          <div class="fg-number" id="fg-number"></div>
+          <div class="fg-label" id="fg-label"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- eToro Positions -->
+    <div>
+      <div class="section-title">eToro Open Positions</div>
+      <div class="card">
+        <div class="pills" id="etoro-symbols"></div>
+      </div>
+    </div>
+
+    <!-- Marketing + Issues -->
+    <div class="grid-2">
+
+      <!-- Marketing -->
+      <div>
+        <div class="section-title">Marketing Activity</div>
+        <div class="card">
+          <div class="stat-row"><span class="stat-label">Total posts</span><span class="stat-val green" id="mkt-total"></span></div>
+          <div class="stat-row"><span class="stat-label">ChordRoom mentions</span><span class="stat-val" id="mkt-mentions"></span></div>
+          <div class="stat-row"><span class="stat-label">Direct links</span><span class="stat-val" id="mkt-links"></span></div>
+          <div style="margin-top:12px;">
+            <div class="card-title">Active platforms</div>
+            <div class="pills" id="mkt-platforms"></div>
+          </div>
+          <div id="posts-section" style="display:none; margin-top:12px;">
+            <div class="card-title">Recent Posts</div>
+            <div class="posts-list" id="mkt-posts"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Issues -->
+      <div>
+        <div class="section-title">Issues / Alerts</div>
+        <div id="issues-list"></div>
+      </div>
+
+    </div>
+
+    <!-- Owner Actions -->
+    <div>
+      <div class="section-title">Owner Actions Needed</div>
+      <div class="card">
+        <div id="actions-list"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function fmt(ts) {
+      try {
+        const d = new Date(ts);
+        return d.toLocaleString('fi-FI', { timeZone: 'Europe/Helsinki', hour12: false });
+      } catch { return ts; }
+    }
+
+    function statusBadgeClass(s) {
+      if (!s) return 'sb-monitoring';
+      const lower = s.toLowerCase();
+      if (lower === 'blocked')        return 'sb-blocked';
+      if (lower === 'monitoring')     return 'sb-monitoring';
+      if (lower === 'ready')          return 'sb-ready';
+      if (lower === 'bot handles it') return 'sb-bot';
+      if (lower === 'blocker')        return 'sb-blocker';
+      return 'sb-monitoring';
+    }
+
+    function render(d) {
+      // Header
+      document.getElementById('day-badge').textContent = 'Day ' + d.day;
+      document.getElementById('last-updated').textContent = fmt(d.last_updated);
+
+      // Changes
+      if (d.changes && d.changes.length && d.changes[0] !== 'No changes since last update') {
+        document.getElementById('changes-section').style.display = 'block';
+        document.getElementById('changes-list').innerHTML = d.changes.map(c => '&bull; ' + c).join('<br>');
+      } else {
+        document.getElementById('changes-section').style.display = 'none';
+      }
+
+      // Budget
+      if (d.budget) {
+        const profit = d.budget.profit || 0;
+        document.getElementById('budget-profit').textContent = '€' + profit.toFixed(2);
+        document.getElementById('budget-profit').className = 'card-value ' + (profit >= 0 ? 'green' : 'red');
+        document.getElementById('budget-sub').textContent = '€' + d.budget.initial + ' budget';
+        document.getElementById('budget-revenue').textContent = '€' + (d.budget.revenue || 0).toFixed(2);
+        document.getElementById('budget-expenses').textContent = '€' + (d.budget.spent || 0).toFixed(2);
+        document.getElementById('budget-remaining').textContent = '€' + (d.budget.remaining || 0).toFixed(2);
+      }
+
+      // ChordRoom
+      const up = d.chordroom.status === 'up';
+      const dot = document.getElementById('chord-dot');
+      dot.className = 'dot ' + (up ? 'dot-green' : 'dot-red');
+      document.getElementById('chord-status').textContent = up ? 'UP' : 'DOWN';
+      document.getElementById('chord-status').className = up ? 'green' : 'red';
+      document.getElementById('chord-vtotal').textContent = d.chordroom.visitors_total.toLocaleString();
+      document.getElementById('chord-vdaily').textContent = d.chordroom.visitors_daily.toLocaleString();
+      document.getElementById('chord-rev').textContent = '€' + d.chordroom.revenue_eur.toFixed(2);
+
+      // eToro
+      document.getElementById('etoro-status-text').textContent = d.trading.etoro_status;
+      document.getElementById('etoro-pos').textContent = d.trading.etoro_positions;
+      document.getElementById('etoro-trades-total').textContent = d.trading.etoro_trades_total || '—';
+      document.getElementById('etoro-cash').textContent = '$' + d.trading.etoro_free_cash.toFixed(2);
+
+      // Paper
+      document.getElementById('paper-total').textContent = '$' + (d.trading.paper_total || 0).toFixed(2);
+      const pb = document.getElementById('paper-bots');
+      pb.innerHTML = '';
+      Object.entries(d.trading.paper_bots).forEach(([k, v]) => {
+        const pill = document.createElement('span');
+        pill.className = 'pill';
+        let bal = typeof v === 'object' ? (typeof v.balance === 'number' ? v.balance : 0) : (v || 0);
+        let pnl = typeof v === 'object' ? (v.pnl || 0) : 0;
+        let trades = typeof v === 'object' ? (v.trades || 0) : 0;
+        pill.style.color = pnl >= 0 ? 'var(--green)' : 'var(--red)';
+        pill.textContent = k + (bal ? ' $' + bal.toFixed(0) : '') + (trades ? ' (' + trades + 't)' : '');
+        pb.appendChild(pill);
+      });
+
+      // Market
+      document.getElementById('btc-price').textContent = '$' + d.market.btc.toLocaleString();
+      document.getElementById('eth-price').textContent = '$' + d.market.eth.toLocaleString();
+      document.getElementById('sol-price').textContent = '$' + d.market.sol.toFixed(2);
+      document.getElementById('fg-number').textContent = d.market.fear_greed;
+      document.getElementById('fg-label').textContent = d.market.fear_greed_label;
+
+      // eToro symbols
+      const es = document.getElementById('etoro-symbols');
+      es.innerHTML = '';
+      d.trading.etoro_symbols.forEach(s => {
+        const p = document.createElement('span');
+        p.className = 'pill';
+        p.textContent = s;
+        es.appendChild(p);
+      });
+
+      // Marketing
+      document.getElementById('mkt-total').textContent = d.marketing.total_posts;
+      document.getElementById('mkt-mentions').textContent = d.marketing.chordroom_mentions;
+      document.getElementById('mkt-links').textContent = d.marketing.direct_links;
+      const mp = document.getElementById('mkt-platforms');
+      mp.innerHTML = '';
+      d.marketing.platforms.forEach(pl => {
+        const p = document.createElement('span');
+        p.className = 'pill';
+        p.style.color = 'var(--muted)';
+        p.textContent = pl;
+        mp.appendChild(p);
+      });
+
+      // Recent posts
+      if (d.marketing.recent_posts && d.marketing.recent_posts.length > 0) {
+        document.getElementById('posts-section').style.display = 'block';
+        const postsEl = document.getElementById('mkt-posts');
+        postsEl.innerHTML = '';
+        d.marketing.recent_posts.forEach(post => {
+          const row = document.createElement('div');
+          row.className = 'post-row';
+          const plat = (post.platform || '').toLowerCase();
+          let platClass = 'plat-other';
+          if (plat.includes('mastodon') || plat.includes('.social')) platClass = 'plat-mastodon';
+          else if (plat.includes('dev.to') || plat === 'devto') platClass = 'plat-devto';
+          else if (plat.includes('lemmy')) platClass = 'plat-lemmy';
+          else if (plat.includes('hacker') || plat === 'hn') platClass = 'plat-hn';
+          else if (plat.includes('nostr')) platClass = 'plat-nostr';
+          const titleHtml = post.url
+            ? '<a href="' + post.url + '" target="_blank" rel="noopener">' + post.title + '</a>'
+            : post.title;
+          row.innerHTML =
+            '<span class="post-date">' + (post.date || '') + '</span>' +
+            '<span class="post-platform ' + platClass + '">' + (post.platform || '') + '</span>' +
+            '<span class="post-title">' + titleHtml + '</span>' +
+            (post.project ? '<span class="post-project">' + post.project + '</span>' : '');
+          postsEl.appendChild(row);
+        });
+      } else {
+        document.getElementById('posts-section').style.display = 'none';
+      }
+
+      // Issues
+      const il = document.getElementById('issues-list');
+      il.innerHTML = '';
+      d.issues.forEach(issue => {
+        const div = document.createElement('div');
+        div.className = 'issue-item';
+        if (typeof issue === 'object' && issue.title) {
+          const detailHtml = issue.detail ? '<div class="issue-detail">' + issue.detail + '</div>' : '';
+          div.innerHTML = '<span class="issue-icon">&#9888;</span><div><div class="issue-title">' + issue.title + '</div>' + detailHtml + '</div>';
+        } else {
+          div.innerHTML = '<span class="issue-icon">&#9888;</span><span>' + issue + '</span>';
+        }
+        il.appendChild(div);
+      });
+
+      // Owner actions
+      const al = document.getElementById('actions-list');
+      al.innerHTML = '';
+      d.owner_actions.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'action-item';
+        const bc = statusBadgeClass(item.status);
+        const actionHtml = item.link
+          ? '<a href="' + item.link + '" target="_blank" rel="noopener">' + item.action + '</a>'
+          : item.action;
+        const detailHtml = item.detail
+          ? '<div class="action-detail">' + item.detail + '</div>'
+          : '';
+        div.innerHTML =
+          '<div class="action-num">' + item.priority + '</div>' +
+          '<div class="action-text">' + actionHtml + detailHtml + '</div>' +
+          '<span class="status-badge ' + bc + '">' + item.status + '</span>';
+        al.appendChild(div);
+      });
+
+      // Projects
+      const pg = document.getElementById('projects-grid');
+      pg.innerHTML = '';
+      if (d.projects) {
+        d.projects.forEach(proj => {
+          const a = document.createElement('a');
+          a.className = 'project-card';
+          a.href = proj.url || '#';
+          const statusClass = proj.status === 'live' ? 'green' : (proj.status === 'pre-launch' ? 'yellow' : 'muted');
+          const statusDot = proj.status === 'live' ? 'dot-green' : (proj.status === 'pre-launch' ? 'dot-yellow' : 'dot-red');
+          const rev = proj.revenue_eur > 0 ? '<span class="project-card-revenue green">\u20ac' + proj.revenue_eur.toFixed(2) + '</span>' : '<span class="project-card-revenue muted">\u20ac0</span>';
+          a.innerHTML =
+            '<div class="project-card-header">' +
+              '<span class="project-card-name">' + proj.name + '</span>' +
+              '<div class="status-row" style="margin:0"><div class="dot ' + statusDot + '"></div><span class="' + statusClass + '" style="font-size:11px;font-weight:600;">' + proj.status.toUpperCase() + '</span></div>' +
+            '</div>' +
+            '<div class="project-card-desc">' + proj.description + '</div>' +
+            '<div class="project-card-footer">' + rev + '</div>';
+          pg.appendChild(a);
+        });
+      }
+
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'flex';
+    }
+
+    async function loadData() {
+      try {
+        const res = await fetch('./data.json?t=' + Date.now());
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        document.getElementById('error-bar').style.display = 'none';
+        render(data);
+      } catch (e) {
+        document.getElementById('error-bar').style.display = 'block';
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'flex';
+        console.error('Failed to load data.json:', e);
+      }
+    }
+
+    loadData();
+    setInterval(loadData, 5 * 60 * 1000);
+  </script>
+</body>
+</html>
