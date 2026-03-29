@@ -400,11 +400,14 @@
         <div class="card" id="card-etoro">
           <div class="card-title">eToro Real Trading</div>
           <div class="status-row">
-            <div class="dot dot-red"></div>
-            <span id="etoro-status-text" style="font-weight:600;font-size:11px;color:var(--red);"></span>
+            <div class="dot" id="etoro-dot"></div>
+            <span id="etoro-status-text" style="font-weight:600;font-size:11px;"></span>
           </div>
+          <div class="stat-row"><span class="stat-label">Realized P&amp;L</span><span class="stat-val" id="etoro-pnl"></span></div>
+          <div class="stat-row"><span class="stat-label">Win rate</span><span class="stat-val" id="etoro-winrate"></span></div>
           <div class="stat-row"><span class="stat-label">Active positions</span><span class="stat-val" id="etoro-pos"></span></div>
           <div class="stat-row"><span class="stat-label">Total trades</span><span class="stat-val" id="etoro-trades-total"></span></div>
+          <div class="stat-row"><span class="stat-label">Total runs</span><span class="stat-val" id="etoro-runs"></span></div>
           <div class="stat-row"><span class="stat-label">Free cash</span><span class="stat-val green" id="etoro-cash"></span></div>
         </div>
 
@@ -563,10 +566,24 @@
       document.getElementById('chord-rev').textContent = '€' + d.chordroom.revenue_eur.toFixed(2);
 
       // eToro
-      document.getElementById('etoro-status-text').textContent = d.trading.etoro_status;
-      document.getElementById('etoro-pos').textContent = d.trading.etoro_positions;
+      document.getElementById('etoro-status-text').textContent = d.trading.etoro_status || 'Real mode';
+      var etoroDot = document.getElementById('etoro-dot');
+      etoroDot.className = 'dot dot-green';
+      document.getElementById('etoro-status-text').style.color = 'var(--green)';
+
+      // P&L
+      var pnl = d.trading.etoro_pnl || 0;
+      var pnlEl = document.getElementById('etoro-pnl');
+      pnlEl.textContent = '$' + pnl.toFixed(2);
+      pnlEl.className = 'stat-val ' + (pnl >= 0 ? 'green' : 'red');
+
+      // Win rate
+      document.getElementById('etoro-winrate').textContent = d.trading.etoro_win_rate || '—';
+
+      document.getElementById('etoro-pos').textContent = d.trading.etoro_positions || '—';
       document.getElementById('etoro-trades-total').textContent = d.trading.etoro_trades_total || '—';
-      document.getElementById('etoro-cash').textContent = '$' + d.trading.etoro_free_cash.toFixed(2);
+      document.getElementById('etoro-runs').textContent = d.trading.etoro_total_runs || '—';
+      document.getElementById('etoro-cash').textContent = '$' + (d.trading.etoro_free_cash || 0).toFixed(2);
 
       // Paper
       document.getElementById('paper-total').textContent = '$' + (d.trading.paper_total || 0).toFixed(2);
@@ -686,8 +703,9 @@
           const a = document.createElement('a');
           a.className = 'project-card';
           a.href = proj.url || '#';
-          const statusClass = proj.status === 'live' ? 'green' : (proj.status === 'pre-launch' ? 'yellow' : 'muted');
-          const statusDot = proj.status === 'live' ? 'dot-green' : (proj.status === 'pre-launch' ? 'dot-yellow' : 'dot-red');
+          const isUp = ['live','up','active','running'].includes(proj.status);
+          const statusClass = isUp ? 'green' : (proj.status === 'pre-launch' ? 'yellow' : 'muted');
+          const statusDot = isUp ? 'dot-green' : (proj.status === 'pre-launch' ? 'dot-yellow' : 'dot-red');
           const rev = proj.revenue_eur > 0 ? '<span class="project-card-revenue green">\u20ac' + proj.revenue_eur.toFixed(2) + '</span>' : '<span class="project-card-revenue muted">\u20ac0</span>';
           a.innerHTML =
             '<div class="project-card-header">' +

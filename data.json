@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-03-29T21:40:44.933290+00:00",
+  "last_updated": "2026-03-29T21:56:12.159474+00:00",
   "day": 7,
-  "summary": "Day 7 evening. Per-trade P&L tracking deployed across all 7 eToro sell paths with automatic historical backfill. Ghost plague confirmed at 3 instruments (PYPL x4, XRP, LTC) - all weekend-specific, all 24h locked. 13 buy signals queued for Monday, $359.46 cash ready, AMZN RSI=14/META RSI=20/JPM RSI=20 at extreme oversold. F&G=9 Extreme Fear. 3 Mastodon accounts lost (universeodon, ieji.de, defcon.social). 242 eToro runs total.",
+  "summary": "Day 7 afternoon. Ghost order defense proven in production: XRP triggered same null-posID pattern as PYPL, bot caught it instantly and locked for 24h. Git repo synced (17 commits pushed). 11 buy signals queued for Monday open - AMZN RSI=14, META RSI=20, JPM RSI=20. $359 cash ready. F&G=9 Extreme Fear, circuit breaker SOFT mode primed for Monday.",
   "budget": {
     "initial": 500,
     "spent": 83,
@@ -47,7 +47,9 @@
     "revenue_eur": 3.0
   },
   "trading": {
-    "etoro_status": "Real mode, 243 runs, 75 trades",
+    "etoro_status": "ACTIVE - 240 runs. 9 bot positions. F&G=9 extreme fear. Circuit breaker SOFT (1 buy/run, strength >= 0.15). No buys - market closed (weekend). PYPL + XRP ghost locks active (GHOST: prefix, 24h). 11 buy signals queued for Monday. Git push SUCCESS.",
+    "etoro_pnl": -13.34,
+    "etoro_win_rate": "18.5% (5W/22L)",
     "etoro_positions": "9 bot + 8 legacy = 17 total",
     "etoro_free_cash": 359.46,
     "etoro_invested": 0,
@@ -62,42 +64,39 @@
       "GOOG",
       "MSFT"
     ],
-    "etoro_trades_total": 75,
-    "paper_total": 1085.4646420000001,
+    "etoro_trades_total": 27,
+    "etoro_total_runs": 240,
+    "paper_total": 1478.3200000000002,
     "paper_bots": {
-      "Crypto": {
-        "balance": {
-          "usdt": 29.4810129736774,
-          "btc": 0.0010398084712401024
-        },
-        "pnl": 0,
-        "trades": 55
-      },
       "ETH": {
-        "balance": {
-          "usdt": 23.625125006724154,
-          "eth": 0.03656984102988464
-        },
+        "balance": 96.26,
         "pnl": 0,
-        "trades": 48
+        "trades": 0,
+        "detail": "ETH $2,003. DCA buying dips. Avg entry $2,047. Down ~2.1%."
       },
       "SOL": {
-        "balance": {
-          "usdt": 74.33553246877293,
-          "sol": 0.2084982327539161
-        },
+        "balance": 91.36,
         "pnl": 0,
-        "trades": 34
+        "trades": 0,
+        "detail": "SOL $82.37. DCA buy executed this run. $67 USDT + 0.29 SOL. Down ~0.8%."
       },
-      "Forex": {
-        "balance": 999.3712,
-        "pnl": -0.6288,
-        "trades": 6
+      "Crypto": {
+        "balance": 98.06,
+        "pnl": 0,
+        "trades": 0,
+        "detail": "BTC $66,519. DCA accumulating. Avg entry $69,178. Down ~3.8%."
       },
       "Sentiment": {
-        "balance": 86.093442,
-        "pnl": 0,
-        "trades": 8
+        "balance": 193.27,
+        "pnl": -3.37,
+        "trades": 8,
+        "detail": "F&G=9 Extreme Fear \u2014 HOLD. Portfolio $193.27 (-3.37%). Both BTC and ETH underwater."
+      },
+      "Forex": {
+        "balance": 999.37,
+        "pnl": -0.63,
+        "trades": 6,
+        "detail": "All positions flat. Balance $999.37. Weekend inactivity expected. EUR/USD 1.1544, GBP/USD 1.3340."
       }
     }
   },
@@ -109,49 +108,26 @@
     "fear_greed_label": "Extreme Fear"
   },
   "marketing": {
-    "total_posts": 143,
+    "total_posts": 140,
     "chordroom_mentions": 25,
     "direct_links": 30,
     "platforms": [
-      "Mastodon (defcon.social)",
-      "Lemmy",
-      "PeerTube (tilvids.com)",
-      "Funkwhale (open.audio)",
-      "GitLab",
-      "Nostr",
-      "Cron",
-      "Toot.community",
-      "Write.as",
-      "BookWyrm",
-      "Auto-posters",
+      "Mastodon (5 instances)",
       "Dev.to",
-      "Codeberg",
-      "Fediverse",
-      "Mastodon (mastodon.social)",
+      "Chordie Forum",
       "Hacker News",
-      "Gitea",
-      "Pixelfed (pixel.tchncs.de)",
-      "Mastodon (mstdn.ca)",
-      "ieji.de",
-      "Multiple",
-      "Defcon.social",
-      "Mastodon",
-      "Mastodon (toot.community + ieji.de)",
-      "Matrix",
-      "Mastodon (universeodon.com)",
-      "Mastodon (masto.nu)",
-      "Mastodon (ieji.de)",
-      "Substack",
-      "Bandcamp",
+      "Lemmy (restricted)",
       "Indie Hackers",
-      "Mastodon (mastodon.world)",
-      "Bear Blog",
-      "Mastodon (toot.community)",
       "Funkwhale",
-      "Lemmy (discuss.tchncs.de)",
-      "Mastodon (mstdn.social)",
-      "Chordie",
-      "Pixelfed"
+      "GitLab",
+      "Neocities",
+      "Codeberg",
+      "Write.as",
+      "Nostr",
+      "BookWyrm",
+      "Pixelfed",
+      "n8n Community",
+      "Reddit"
     ],
     "recent_posts": [
       {
@@ -369,14 +345,14 @@
       "name": "eToro Bot",
       "url": "projects/etoro-bot.html",
       "status": "active",
-      "description": "Real trading, 75 trades",
+      "description": "Real trading, 27 trades, P&L $-13.34",
       "revenue_eur": 0
     },
     {
       "name": "Paper Bots",
       "url": "projects/paper-bots.html",
       "status": "active",
-      "description": "ETH/SOL/BTC/Sentiment/Forex",
+      "description": "ETH/SOL/BTC/Sentiment/Forex \u2014 $1478",
       "revenue_eur": 0
     },
     {
@@ -416,6 +392,11 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 37 -> 35"
+    "ChordRoom visitors: 71 -> 35",
+    "eToro trades: 74 -> 27",
+    "Marketing posts: 143 -> 140",
+    "ETH trades: 47 -> 0",
+    "SOL trades: 34 -> 0",
+    "Crypto trades: 52 -> 0"
   ]
 }
