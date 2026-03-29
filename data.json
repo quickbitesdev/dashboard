@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-29T17:36:27.168725+00:00",
+  "last_updated": "2026-03-29T18:36:30.581220+00:00",
   "day": 7,
   "summary": "Day 7 evening. Per-trade P&L tracking deployed across all 7 eToro sell paths with automatic historical backfill. Ghost plague confirmed at 3 instruments (PYPL x4, XRP, LTC) - all weekend-specific, all 24h locked. 13 buy signals queued for Monday, $359.46 cash ready, AMZN RSI=14/META RSI=20/JPM RSI=20 at extreme oversold. F&G=9 Extreme Fear. 3 Mastodon accounts lost (universeodon, ieji.de, defcon.social). 242 eToro runs total.",
   "budget": {
@@ -41,13 +41,13 @@
   "chordroom": {
     "status": "up",
     "visitors_total": 483,
-    "visitors_daily": 69,
-    "visitors_yesterday": 50,
+    "visitors_daily": 57,
+    "visitors_yesterday": 57,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
   "trading": {
-    "etoro_status": "Real mode, 242 runs, 75 trades",
+    "etoro_status": "Real mode, 243 runs, 75 trades",
     "etoro_positions": "9 bot + 8 legacy = 17 total",
     "etoro_free_cash": 359.46,
     "etoro_invested": 0,
@@ -67,19 +67,19 @@
     "paper_bots": {
       "Crypto": {
         "balance": {
-          "usdt": 62.8810129736774,
-          "btc": 0.0005360214711770537
+          "usdt": 29.4810129736774,
+          "btc": 0.0010398084712401024
         },
         "pnl": 0,
-        "trades": 53
+        "trades": 55
       },
       "ETH": {
         "balance": {
-          "usdt": 33.625125006724154,
-          "eth": 0.031550793745440175
+          "usdt": 23.625125006724154,
+          "eth": 0.03656984102988464
         },
         "pnl": 0,
-        "trades": 47
+        "trades": 48
       },
       "SOL": {
         "balance": {
@@ -113,45 +113,45 @@
     "chordroom_mentions": 25,
     "direct_links": 30,
     "platforms": [
-      "Bear Blog",
-      "Nostr",
-      "Mastodon (mastodon.world)",
-      "ieji.de",
-      "Funkwhale",
-      "Toot.community",
-      "Mastodon (mstdn.ca)",
-      "Mastodon (toot.community)",
-      "Mastodon (mstdn.social)",
-      "Substack",
-      "Lemmy",
-      "Funkwhale (open.audio)",
-      "Defcon.social",
-      "Mastodon (ieji.de)",
-      "Fediverse",
-      "Write.as",
-      "GitLab",
-      "Cron",
-      "Auto-posters",
       "Pixelfed",
+      "Mastodon (mastodon.social)",
+      "Cron",
+      "Dev.to",
+      "Lemmy",
+      "ieji.de",
+      "Codeberg",
+      "Pixelfed (pixel.tchncs.de)",
+      "GitLab",
+      "Mastodon (masto.nu)",
+      "Matrix",
+      "PeerTube (tilvids.com)",
+      "Bandcamp",
+      "Nostr",
+      "Mastodon (defcon.social)",
+      "Fediverse",
+      "Auto-posters",
+      "BookWyrm",
+      "Write.as",
+      "Mastodon (mastodon.world)",
+      "Chordie",
       "Mastodon (universeodon.com)",
+      "Hacker News",
+      "Mastodon (toot.community + ieji.de)",
+      "Funkwhale (open.audio)",
       "Indie Hackers",
       "Gitea",
-      "Hacker News",
-      "Pixelfed (pixel.tchncs.de)",
-      "Mastodon (masto.nu)",
-      "Mastodon (mastodon.social)",
-      "Mastodon (toot.community + ieji.de)",
-      "Matrix",
       "Multiple",
-      "Mastodon",
-      "Bandcamp",
-      "BookWyrm",
-      "Dev.to",
       "Lemmy (discuss.tchncs.de)",
-      "PeerTube (tilvids.com)",
-      "Chordie",
-      "Codeberg",
-      "Mastodon (defcon.social)"
+      "Mastodon",
+      "Mastodon (mstdn.social)",
+      "Substack",
+      "Mastodon (mstdn.ca)",
+      "Mastodon (ieji.de)",
+      "Bear Blog",
+      "Toot.community",
+      "Mastodon (toot.community)",
+      "Defcon.social",
+      "Funkwhale"
     ],
     "recent_posts": [
       {
@@ -416,6 +416,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 71 -> 69"
+    "ChordRoom visitors: 69 -> 57"
   ]
 }
