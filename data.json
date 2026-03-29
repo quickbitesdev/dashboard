@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-29T13:36:10.630913+00:00",
+  "last_updated": "2026-03-29T14:36:14.419508+00:00",
   "day": 7,
   "summary": "Day 7. F&G=9 extreme fear persists, but the circuit breaker just dropped from 0.30 to 0.15 \u2014 contrarian dip buying is now unlocked. NVDA (+13.72% news sentiment) and MSFT (+5.12%) are primed. Reddit off-topic comment bug flagged. 255 news articles analyzed this cycle. ChordRoom at 18,627 total visitors.",
   "budget": {
@@ -40,14 +40,14 @@
   },
   "chordroom": {
     "status": "up",
-    "visitors_total": 482,
-    "visitors_daily": 75,
-    "visitors_yesterday": 55,
+    "visitors_total": 483,
+    "visitors_daily": 72,
+    "visitors_yesterday": 58,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
   "trading": {
-    "etoro_status": "Real mode, 238 runs, 73 trades",
+    "etoro_status": "Real mode, 240 runs, 74 trades",
     "etoro_positions": "9 bot + 8 legacy = 17 total",
     "etoro_free_cash": 359.46,
     "etoro_invested": 0,
@@ -62,24 +62,24 @@
       "GOOG",
       "MSFT"
     ],
-    "etoro_trades_total": 73,
+    "etoro_trades_total": 74,
     "paper_total": 1085.4646420000001,
     "paper_bots": {
       "Crypto": {
         "balance": {
-          "usdt": 96.0060129736774,
-          "btc": 3.793976341716625e-05
+          "usdt": 81.0060129736774,
+          "btc": 0.0002630792260572987
         },
         "pnl": 0,
-        "trades": 51
+        "trades": 52
       },
       "ETH": {
         "balance": {
-          "usdt": 56.865125006724156,
-          "eth": 0.019880553360583364
+          "usdt": 33.625125006724154,
+          "eth": 0.031550793745440175
         },
         "pnl": 0,
-        "trades": 45
+        "trades": 47
       },
       "SOL": {
         "balance": {
@@ -114,44 +114,44 @@
     "direct_links": 30,
     "platforms": [
       "GitLab",
-      "Multiple",
       "Substack",
-      "Fediverse",
-      "Mastodon (toot.community)",
-      "Pixelfed",
-      "Lemmy",
-      "Codeberg",
+      "Nostr",
       "Dev.to",
-      "Pixelfed (pixel.tchncs.de)",
-      "Matrix",
-      "Defcon.social",
-      "Mastodon (universeodon.com)",
       "Auto-posters",
-      "Hacker News",
-      "Bandcamp",
-      "Mastodon (toot.community + ieji.de)",
-      "Mastodon (mstdn.social)",
-      "Mastodon (defcon.social)",
-      "Mastodon (mastodon.social)",
-      "Mastodon (masto.nu)",
-      "Indie Hackers",
-      "Funkwhale",
-      "ieji.de",
       "Mastodon (mastodon.world)",
-      "Chordie",
+      "Multiple",
       "Gitea",
       "Bear Blog",
-      "Mastodon",
+      "Matrix",
+      "Pixelfed (pixel.tchncs.de)",
+      "Bandcamp",
+      "Cron",
+      "Mastodon (mastodon.social)",
       "Toot.community",
+      "Mastodon (toot.community + ieji.de)",
+      "Fediverse",
+      "Funkwhale (open.audio)",
+      "Codeberg",
+      "Funkwhale",
       "PeerTube (tilvids.com)",
       "Mastodon (mstdn.ca)",
-      "Funkwhale (open.audio)",
-      "Mastodon (ieji.de)",
-      "Lemmy (discuss.tchncs.de)",
-      "Nostr",
-      "Cron",
+      "Mastodon (mstdn.social)",
+      "Pixelfed",
+      "Hacker News",
+      "Mastodon (masto.nu)",
       "BookWyrm",
-      "Write.as"
+      "Lemmy",
+      "Mastodon (universeodon.com)",
+      "Lemmy (discuss.tchncs.de)",
+      "Mastodon",
+      "Mastodon (toot.community)",
+      "Chordie",
+      "ieji.de",
+      "Mastodon (ieji.de)",
+      "Indie Hackers",
+      "Defcon.social",
+      "Write.as",
+      "Mastodon (defcon.social)"
     ],
     "recent_posts": [
       {
@@ -369,7 +369,7 @@
       "name": "eToro Bot",
       "url": "projects/etoro-bot.html",
       "status": "active",
-      "description": "Real trading, 73 trades",
+      "description": "Real trading, 74 trades",
       "revenue_eur": 0
     },
     {
@@ -416,6 +416,6 @@
     }
   ],
   "changes": [
-    "No changes since last update"
+    "ChordRoom visitors: 75 -> 72"
   ]
 }
