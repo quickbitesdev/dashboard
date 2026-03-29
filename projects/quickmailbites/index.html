@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickMailBites — The email client that reads your S3 bucket</title>
+  <meta name="description" content="Native cross-platform email client for AWS SES users. Reads raw MIME emails directly from S3 buckets. Supports IMAP, Gmail OAuth. Not Electron." />
+  <meta name="keywords" content="email client, AWS S3, SES, IMAP, Flutter, native, desktop, Linux, Windows, Android, open source" />
+  <meta property="og:title" content="QuickMailBites — The email client that reads your S3 bucket" />
+  <meta property="og:description" content="The only email client that reads raw MIME emails directly from AWS S3 buckets. Native, fast, keyboard-driven." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bonskari.github.io/money-maker/projects/quickmailbites/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="QuickMailBites — S3 Email Client" />
+  <meta name="twitter:description" content="Native email client that reads your AWS S3 bucket. Not Electron. Free forever." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0e14;
+      --surface: #131920;
+      --surface-2: #1a2130;
+      --border: #252d3a;
+      --text: #e6edf3;
+      --muted: #7d8a9a;
+      --green: #00ff88;
+      --green-dim: #00cc6a;
+      --green-glow: rgba(0, 255, 136, 0.15);
+      --blue: #58a6ff;
+      --purple: #bc8cff;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10, 14, 20, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-brand {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700; font-size: 18px; color: var(--green);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--green); }
+
+    /* Hero */
+    .hero {
+      padding: 160px 24px 100px;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, var(--green-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 100px; padding: 6px 16px; margin-bottom: 28px;
+      font-size: 13px; color: var(--muted);
+    }
+    .badge .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green); box-shadow: 0 0 8px var(--green);
+    }
+    h1 {
+      font-size: clamp(36px, 5vw, 60px);
+      font-weight: 800; line-height: 1.1;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, var(--text) 0%, var(--muted) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    h1 span {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-dim) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 18px; color: var(--muted); max-width: 560px; margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .hero-buttons {
+      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 10px; font-size: 15px; font-weight: 600;
+      text-decoration: none; transition: all 0.2s; border: none; cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--green); color: #0a0e14;
+    }
+    .btn-primary:hover {
+      background: #33ff9f; box-shadow: 0 0 30px var(--green-glow);
+    }
+    .btn-secondary {
+      background: var(--surface-2); color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover {
+      border-color: var(--green); color: var(--green);
+    }
+    .btn svg { width: 18px; height: 18px; }
+
+    /* Screenshot */
+    .screenshot-section {
+      padding: 0 24px 80px; text-align: center;
+    }
+    .screenshot-frame {
+      max-width: 900px; margin: 0 auto;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .screenshot-bar {
+      display: flex; align-items: center; gap: 8px;
+      padding: 14px 18px;
+      background: var(--surface-2); border-bottom: 1px solid var(--border);
+    }
+    .screenshot-bar .circle {
+      width: 12px; height: 12px; border-radius: 50%;
+    }
+    .screenshot-bar .circle:nth-child(1) { background: #ff5f57; }
+    .screenshot-bar .circle:nth-child(2) { background: #febc2e; }
+    .screenshot-bar .circle:nth-child(3) { background: #28c840; }
+    .screenshot-placeholder {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      height: 400px; color: var(--muted); font-size: 14px;
+      background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%);
+    }
+    .screenshot-placeholder svg { width: 48px; height: 48px; margin-bottom: 12px; opacity: 0.4; }
+
+    /* Features */
+    .features {
+      padding: 80px 24px;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .section-title {
+      text-align: center; margin-bottom: 60px;
+    }
+    .section-title h2 {
+      font-size: 32px; font-weight: 700; margin-bottom: 12px;
+    }
+    .section-title p {
+      color: var(--muted); font-size: 16px; max-width: 500px; margin: 0 auto;
+    }
+    .feature-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .feature-card:hover {
+      border-color: var(--green);
+      box-shadow: 0 0 30px var(--green-glow);
+    }
+    .feature-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--green-glow);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+    .feature-card h3 {
+      font-size: 17px; font-weight: 700; margin-bottom: 8px;
+    }
+    .feature-card p {
+      color: var(--muted); font-size: 14px; line-height: 1.6;
+    }
+
+    /* Downloads */
+    .downloads {
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .download-grid {
+      display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+      max-width: 900px; margin: 0 auto;
+    }
+    .download-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 40px;
+      flex: 1; min-width: 240px; max-width: 280px;
+      transition: border-color 0.3s, transform 0.2s;
+    }
+    .download-card:hover {
+      border-color: var(--green); transform: translateY(-4px);
+    }
+    .download-card .os-icon {
+      font-size: 36px; margin-bottom: 12px; display: block;
+    }
+    .download-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+    .download-card .size { color: var(--muted); font-size: 13px; margin-bottom: 16px; }
+    .download-card .btn { width: 100%; justify-content: center; }
+
+    /* Keyboard */
+    .keyboard-section {
+      padding: 80px 24px;
+      max-width: 800px; margin: 0 auto;
+    }
+    .key-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px; margin-top: 40px;
+    }
+    .key-item {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 18px;
+    }
+    kbd {
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 6px; padding: 4px 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px; font-weight: 600; color: var(--green);
+      min-width: 36px; text-align: center;
+    }
+    .key-item span { color: var(--muted); font-size: 14px; }
+
+    /* Donate */
+    .donate {
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .donate-card {
+      max-width: 560px; margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px; padding: 48px 40px;
+    }
+    .donate-card h2 { font-size: 26px; font-weight: 700; margin-bottom: 12px; }
+    .donate-card p {
+      color: var(--muted); font-size: 15px; margin-bottom: 28px; line-height: 1.7;
+    }
+    .donate-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--muted); font-size: 13px;
+    }
+    footer a { color: var(--green); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .hero { padding: 120px 16px 60px; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .download-card { max-width: 100%; }
+      .key-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">QuickMailBites</a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href="https://github.com/bonskari/quickmailbites" target="_blank">GitHub</a>
+      <a href="#donate">Donate</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="badge"><div class="dot"></div> v0.1.0 Released</div>
+  <h1>The email client that reads<br/>your <span>S3 bucket</span></h1>
+  <p class="hero-sub">
+    Native desktop email client for AWS SES users. Reads raw MIME emails directly from S3.
+    Supports IMAP and Gmail OAuth. Not Electron. Free forever.
+  </p>
+  <div class="hero-buttons">
+    <a href="#download" class="btn btn-primary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download
+    </a>
+    <a href="https://github.com/bonskari/quickmailbites" target="_blank" class="btn btn-secondary">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      View Source
+    </a>
+  </div>
+</section>
+
+<section class="screenshot-section">
+  <div class="screenshot-frame">
+    <div class="screenshot-bar">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="screenshot-placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+      <span>App screenshot coming soon</span>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="section-title">
+    <h2>Built for developers who use AWS</h2>
+    <p>The only email client that natively reads S3 buckets. No workarounds, no forwarding.</p>
+  </div>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">S3</div>
+      <h3>S3 Email Reading</h3>
+      <p>Read raw MIME emails directly from your AWS S3 bucket. Perfect for SES users who route inbound email to S3.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">N</div>
+      <h3>Actually Native</h3>
+      <p>Built with Flutter. Not Electron, not a web wrapper. Real native performance with low memory usage and instant startup.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">3x</div>
+      <h3>IMAP + S3 + Gmail</h3>
+      <p>One client for all your email. Standard IMAP, AWS S3 buckets, and Gmail OAuth all work together.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">kb</div>
+      <h3>Keyboard-First</h3>
+      <p>Navigate with j/k, reply with r, forward with f, compose with c. Built for people who hate reaching for the mouse.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">UI</div>
+      <h3>Dark Glassmorphism</h3>
+      <p>Modern dark theme with blur effects and green accents. Draggable, resizable panels that adapt to your workflow.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">up</div>
+      <h3>Auto-Update</h3>
+      <p>Self-updating binary with semver versioning. System tray icon with unread badge keeps you informed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="downloads" id="download">
+  <div class="section-title">
+    <h2>Download v0.1.0</h2>
+    <p>Free and open source. No account required.</p>
+  </div>
+  <div class="download-grid">
+    <div class="download-card">
+      <span class="os-icon">&#128039;</span>
+      <h3>Linux</h3>
+      <p class="size">x64 &middot; 19.5 MB</p>
+      <a href="https://github.com/bonskari/quickmailbites/releases/download/0.1.0/quickmailbites-linux-x64.tar.gz" class="btn btn-primary">Download .tar.gz</a>
+    </div>
+    <div class="download-card">
+      <span class="os-icon">&#127999;</span>
+      <h3>Windows</h3>
+      <p class="size">x64 &middot; 13.3 MB</p>
+      <a href="https://github.com/bonskari/quickmailbites/releases/download/0.1.0/quickmailbites-windows-x64.zip" class="btn btn-primary">Download .zip</a>
+    </div>
+    <div class="download-card">
+      <span class="os-icon">&#128241;</span>
+      <h3>Android</h3>
+      <p class="size">APK &middot; 58.5 MB</p>
+      <a href="https://github.com/bonskari/quickmailbites/releases/download/0.1.0/app-release.apk" class="btn btn-primary">Download .apk</a>
+    </div>
+  </div>
+</section>
+
+<section class="keyboard-section">
+  <div class="section-title">
+    <h2>Keyboard shortcuts</h2>
+    <p>Email at the speed of thought</p>
+  </div>
+  <div class="key-grid">
+    <div class="key-item"><kbd>j</kbd> <span>Next message</span></div>
+    <div class="key-item"><kbd>k</kbd> <span>Previous message</span></div>
+    <div class="key-item"><kbd>r</kbd> <span>Reply</span></div>
+    <div class="key-item"><kbd>f</kbd> <span>Forward</span></div>
+    <div class="key-item"><kbd>c</kbd> <span>Compose</span></div>
+    <div class="key-item"><kbd>Esc</kbd> <span>Deselect</span></div>
+  </div>
+</section>
+
+<section class="donate" id="donate">
+  <div class="donate-card">
+    <h2>Support the project</h2>
+    <p>
+      QuickMailBites is free forever with no paid tiers or feature gating.
+      If it saves you time, consider buying me a coffee.
+    </p>
+    <div class="donate-buttons">
+      <a href="https://ko-fi.com/bonskari" target="_blank" class="btn btn-primary">Support on Ko-fi</a>
+      <a href="https://github.com/sponsors/bonskari" target="_blank" class="btn btn-secondary">GitHub Sponsors</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>QuickMailBites &copy; 2026 &middot; <a href="https://github.com/bonskari/quickmailbites">GitHub</a> &middot; Made with Flutter</p>
+</footer>
+
+</body>
+</html>
