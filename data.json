@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-29T08:35:00+00:00",
+  "last_updated": "2026-03-29T09:35:57.211239+00:00",
   "day": 7,
   "summary": "Day 7. F&G=9 extreme fear persists, but the circuit breaker just dropped from 0.30 to 0.15 \u2014 contrarian dip buying is now unlocked. NVDA (+13.72% news sentiment) and MSFT (+5.12%) are primed. Reddit off-topic comment bug flagged. 255 news articles analyzed this cycle. ChordRoom at 18,627 total visitors.",
   "budget": {
@@ -40,14 +40,14 @@
   },
   "chordroom": {
     "status": "up",
-    "visitors_total": 19683,
-    "visitors_daily": 4403,
-    "visitors_yesterday": 6703,
+    "visitors_total": 475,
+    "visitors_daily": 79,
+    "visitors_yesterday": 118,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
   "trading": {
-    "etoro_status": "Real mode, 236 runs, 72 trades",
+    "etoro_status": "Real mode, 235 runs, 72 trades",
     "etoro_positions": "9 bot + 8 legacy = 17 total",
     "etoro_free_cash": 359.46,
     "etoro_invested": 0,
@@ -113,45 +113,45 @@
     "chordroom_mentions": 25,
     "direct_links": 30,
     "platforms": [
-      "Bear Blog",
-      "Mastodon (mastodon.social)",
-      "PeerTube (tilvids.com)",
-      "Cron",
-      "Mastodon (mstdn.social)",
-      "Matrix",
-      "Write.as",
-      "Substack",
-      "Mastodon (defcon.social)",
-      "Mastodon",
-      "BookWyrm",
-      "Mastodon (mstdn.ca)",
-      "Chordie",
-      "Funkwhale",
-      "Auto-posters",
-      "Toot.community",
-      "Nostr",
-      "Mastodon (toot.community + ieji.de)",
-      "Gitea",
-      "Fediverse",
-      "Multiple",
-      "Mastodon (ieji.de)",
-      "Lemmy (discuss.tchncs.de)",
-      "Bandcamp",
-      "Defcon.social",
-      "Funkwhale (open.audio)",
-      "Mastodon (universeodon.com)",
-      "Indie Hackers",
-      "Lemmy",
-      "Codeberg",
-      "ieji.de",
-      "GitLab",
-      "Mastodon (toot.community)",
       "Pixelfed (pixel.tchncs.de)",
-      "Hacker News",
+      "Mastodon (mastodon.social)",
+      "Funkwhale",
+      "Write.as",
+      "Auto-posters",
+      "Pixelfed",
+      "Nostr",
+      "Matrix",
+      "Mastodon (toot.community)",
       "Mastodon (mastodon.world)",
       "Dev.to",
-      "Pixelfed",
-      "Mastodon (masto.nu)"
+      "Chordie",
+      "Lemmy (discuss.tchncs.de)",
+      "Mastodon (mstdn.social)",
+      "Mastodon (toot.community + ieji.de)",
+      "Funkwhale (open.audio)",
+      "Mastodon (ieji.de)",
+      "Mastodon (defcon.social)",
+      "Mastodon",
+      "ieji.de",
+      "Bandcamp",
+      "Cron",
+      "Codeberg",
+      "Mastodon (masto.nu)",
+      "Hacker News",
+      "Mastodon (universeodon.com)",
+      "Fediverse",
+      "Substack",
+      "Bear Blog",
+      "Multiple",
+      "Defcon.social",
+      "Gitea",
+      "Toot.community",
+      "Indie Hackers",
+      "GitLab",
+      "BookWyrm",
+      "PeerTube (tilvids.com)",
+      "Lemmy",
+      "Mastodon (mstdn.ca)"
     ],
     "recent_posts": [
       {
@@ -298,15 +298,19 @@
   },
   "issues": [
     {
-      "title": "F&G=9 Extreme Fear \u2014 $359 dry powder ready for Monday open",
-      "detail": "AAPL signal 0.31 is strongest unblocked candidate"
+      "title": "F&G=9 Extreme Fear \u2014 deepest fear on record, circuit breaker HARD BLOCK",
+      "detail": ""
     },
     {
-      "title": "GitHub Pages dashboard 404 \u2014 quickbitesdev.github.io/dashboard/ down",
-      "detail": "Local dashboard OK, public page needs investigation"
+      "title": "Lemmy: banned from songwriting community \u2014 account may be at risk",
+      "detail": ""
     },
     {
       "title": "eToro 18.5% win rate \u2014 market conditions brutal, stop-losses doing correct job",
+      "detail": ""
+    },
+    {
+      "title": "PYPL null-PID ghost orders (4h timeout should clear automatically)",
       "detail": ""
     },
     {
@@ -326,8 +330,8 @@
       "detail": ""
     },
     {
-      "title": "Mastodon cross-persona self-engagement \u2014 may be favouriting own accounts",
-      "detail": "Self-engagement filter needs cross-persona scope expansion"
+      "title": "Reddit sam_guitar_dev rate-limited \u2014 resumes ~07:31 UTC",
+      "detail": ""
     }
   ],
   "owner_actions": [
@@ -412,10 +416,6 @@
     }
   ],
   "changes": [
-    "SnapAPI restarted: 503 -> 200 OK, 30-min auto-restart added",
-    "Lemmy disabled: alex_riv retired before full account ban",
-    "Nostr relay replaced: relay.nostr.band -> relay.primal.net",
-    "eToro runs: 235 -> 236",
-    "PYPL ghost: confirmed non-blocking (4h timeout handles it)"
+    "ChordRoom visitors: 4403 -> 79"
   ]
 }
