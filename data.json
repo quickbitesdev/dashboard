@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-29T18:36:30.581220+00:00",
+  "last_updated": "2026-03-29T19:36:36.743124+00:00",
   "day": 7,
   "summary": "Day 7 evening. Per-trade P&L tracking deployed across all 7 eToro sell paths with automatic historical backfill. Ghost plague confirmed at 3 instruments (PYPL x4, XRP, LTC) - all weekend-specific, all 24h locked. 13 buy signals queued for Monday, $359.46 cash ready, AMZN RSI=14/META RSI=20/JPM RSI=20 at extreme oversold. F&G=9 Extreme Fear. 3 Mastodon accounts lost (universeodon, ieji.de, defcon.social). 242 eToro runs total.",
   "budget": {
@@ -41,8 +41,8 @@
   "chordroom": {
     "status": "up",
     "visitors_total": 483,
-    "visitors_daily": 57,
-    "visitors_yesterday": 57,
+    "visitors_daily": 48,
+    "visitors_yesterday": 64,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
@@ -109,58 +109,51 @@
     "fear_greed_label": "Extreme Fear"
   },
   "marketing": {
-    "total_posts": 143,
+    "total_posts": 144,
     "chordroom_mentions": 25,
     "direct_links": 30,
     "platforms": [
-      "Pixelfed",
-      "Mastodon (mastodon.social)",
-      "Cron",
-      "Dev.to",
-      "Lemmy",
-      "ieji.de",
-      "Codeberg",
-      "Pixelfed (pixel.tchncs.de)",
-      "GitLab",
-      "Mastodon (masto.nu)",
-      "Matrix",
-      "PeerTube (tilvids.com)",
-      "Bandcamp",
-      "Nostr",
-      "Mastodon (defcon.social)",
       "Fediverse",
-      "Auto-posters",
-      "BookWyrm",
-      "Write.as",
-      "Mastodon (mastodon.world)",
-      "Chordie",
+      "Codeberg",
+      "Mastodon (toot.community)",
+      "Mastodon (ieji.de)",
       "Mastodon (universeodon.com)",
-      "Hacker News",
-      "Mastodon (toot.community + ieji.de)",
-      "Funkwhale (open.audio)",
-      "Indie Hackers",
-      "Gitea",
-      "Multiple",
       "Lemmy (discuss.tchncs.de)",
+      "Lemmy",
+      "Cron",
       "Mastodon",
-      "Mastodon (mstdn.social)",
+      "Bear Blog",
+      "Indie Hackers",
+      "Defcon.social",
+      "ieji.de",
       "Substack",
       "Mastodon (mstdn.ca)",
-      "Mastodon (ieji.de)",
-      "Bear Blog",
+      "Mastodon (mstdn.social)",
+      "Mastodon (defcon.social)",
+      "Dev.to",
+      "Chordie",
+      "Nostr",
+      "Funkwhale",
+      "PeerTube (tilvids.com)",
+      "Pixelfed (pixel.tchncs.de)",
+      "Mastodon (mastodon.world)",
+      "Matrix",
+      "Hacker News",
+      "GitLab",
+      "BookWyrm",
+      "Gitea",
+      "Multiple",
+      "Pixelfed",
+      "Auto-posters",
       "Toot.community",
-      "Mastodon (toot.community)",
-      "Defcon.social",
-      "Funkwhale"
+      "Mastodon (masto.nu)",
+      "Mastodon (toot.community + ieji.de)",
+      "Funkwhale (open.audio)",
+      "Bandcamp",
+      "Write.as",
+      "Mastodon (mastodon.social)"
     ],
     "recent_posts": [
-      {
-        "date": "2026-03-27",
-        "platform": "BookWyrm",
-        "title": "Status: Reading 'Music Theory for Guitarists' by Tom Kolb. Love that...",
-        "url": "https://bookwyrm.social/user/quickbitesdev",
-        "project": "general"
-      },
       {
         "date": "2026-03-27",
         "platform": "Mastodon (mstdn.ca)",
@@ -293,6 +286,13 @@
         "title": "Post: ukulele-switch",
         "url": "https://mastodon.social/@sarahchenmusic/116312254923261112",
         "project": "engagement"
+      },
+      {
+        "date": "2026-03-29",
+        "platform": "Mastodon",
+        "title": "Post: chordroom-artists",
+        "url": "https://mastodon.social/@sarahchenmusic/116314144502910956",
+        "project": "ChordRoom"
       }
     ]
   },
@@ -416,6 +416,7 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 69 -> 57"
+    "ChordRoom visitors: 56 -> 48",
+    "Marketing posts: 143 -> 144"
   ]
 }
