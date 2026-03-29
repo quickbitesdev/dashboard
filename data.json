@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-29T15:36:19.721863+00:00",
+  "last_updated": "2026-03-29T16:36:23.131821+00:00",
   "day": 7,
   "summary": "Day 7 afternoon. Ghost order defense proven in production: XRP triggered same null-posID pattern as PYPL, bot caught it instantly and locked for 24h. Git repo synced (17 commits pushed). 11 buy signals queued for Monday open - AMZN RSI=14, META RSI=20, JPM RSI=20. $359 cash ready. F&G=9 Extreme Fear, circuit breaker SOFT mode primed for Monday.",
   "budget": {
@@ -41,13 +41,13 @@
   "chordroom": {
     "status": "up",
     "visitors_total": 483,
-    "visitors_daily": 71,
-    "visitors_yesterday": 50,
+    "visitors_daily": 70,
+    "visitors_yesterday": 51,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
   "trading": {
-    "etoro_status": "Real mode, 240 runs, 74 trades",
+    "etoro_status": "Real mode, 242 runs, 75 trades",
     "etoro_positions": "9 bot + 8 legacy = 17 total",
     "etoro_free_cash": 359.46,
     "etoro_invested": 0,
@@ -62,16 +62,16 @@
       "GOOG",
       "MSFT"
     ],
-    "etoro_trades_total": 74,
+    "etoro_trades_total": 75,
     "paper_total": 1085.4646420000001,
     "paper_bots": {
       "Crypto": {
         "balance": {
-          "usdt": 81.0060129736774,
-          "btc": 0.0002630792260572987
+          "usdt": 62.8810129736774,
+          "btc": 0.0005360214711770537
         },
         "pnl": 0,
-        "trades": 52
+        "trades": 53
       },
       "ETH": {
         "balance": {
@@ -113,45 +113,45 @@
     "chordroom_mentions": 25,
     "direct_links": 30,
     "platforms": [
-      "Pixelfed (pixel.tchncs.de)",
-      "Lemmy (discuss.tchncs.de)",
-      "Auto-posters",
-      "Write.as",
-      "Toot.community",
-      "Mastodon (mstdn.ca)",
-      "Matrix",
-      "Substack",
-      "Nostr",
-      "Mastodon (defcon.social)",
+      "Mastodon (masto.nu)",
       "Defcon.social",
-      "Dev.to",
-      "Chordie",
-      "Indie Hackers",
-      "Mastodon (mastodon.social)",
-      "Codeberg",
+      "Mastodon (mstdn.social)",
       "Pixelfed",
       "Lemmy",
-      "Mastodon (universeodon.com)",
-      "PeerTube (tilvids.com)",
-      "Multiple",
+      "Auto-posters",
+      "Mastodon (mstdn.ca)",
+      "Write.as",
+      "Gitea",
+      "Mastodon",
+      "Funkwhale",
+      "Codeberg",
+      "Lemmy (discuss.tchncs.de)",
+      "Mastodon (mastodon.social)",
       "Bear Blog",
       "Mastodon (mastodon.world)",
-      "Mastodon (masto.nu)",
-      "Bandcamp",
+      "Mastodon (defcon.social)",
       "Hacker News",
-      "Mastodon (mstdn.social)",
-      "Mastodon (toot.community)",
-      "ieji.de",
       "Fediverse",
-      "Gitea",
-      "Cron",
-      "Funkwhale (open.audio)",
       "Mastodon (ieji.de)",
-      "BookWyrm",
-      "Funkwhale",
+      "Bandcamp",
+      "Cron",
+      "Indie Hackers",
+      "Mastodon (universeodon.com)",
+      "Toot.community",
+      "Nostr",
+      "ieji.de",
       "Mastodon (toot.community + ieji.de)",
-      "Mastodon",
-      "GitLab"
+      "Matrix",
+      "Multiple",
+      "Funkwhale (open.audio)",
+      "Mastodon (toot.community)",
+      "Substack",
+      "PeerTube (tilvids.com)",
+      "BookWyrm",
+      "Chordie",
+      "Pixelfed (pixel.tchncs.de)",
+      "GitLab",
+      "Dev.to"
     ],
     "recent_posts": [
       {
@@ -369,7 +369,7 @@
       "name": "eToro Bot",
       "url": "projects/etoro-bot.html",
       "status": "active",
-      "description": "Real trading, 74 trades",
+      "description": "Real trading, 75 trades",
       "revenue_eur": 0
     },
     {
@@ -416,6 +416,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 72 -> 71"
+    "ChordRoom visitors: 69 -> 70"
   ]
 }
