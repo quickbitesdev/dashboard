@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crossword Daily - Money-Maker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d1117; --surface: #161b22; --border: #30363d;
+      --text: #e6edf3; --muted: #8b949e; --green: #00ff88;
+      --red: #ff4444; --yellow: #ffaa00; --blue: #58a6ff;
+      --font: 'JetBrains Mono', 'Courier New', monospace;
+    }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 13px; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 24px; }
+    .back { color: var(--muted); text-decoration: none; font-size: 12px; display: inline-block; margin-bottom: 24px; }
+    .back:hover { color: var(--green); }
+    h1 { font-size: 28px; font-weight: 700; color: var(--green); margin-bottom: 8px; }
+    .status { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; margin-bottom: 24px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+    .card h2 { font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; }
+    .stat-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); }
+    .stat-row:last-child { border-bottom: none; }
+    .stat-label { color: var(--muted); font-size: 12px; }
+    .stat-val { font-weight: 600; }
+    .green { color: var(--green); }
+    .yellow { color: var(--yellow); }
+    .blue { color: var(--blue); }
+    .red { color: var(--red); }
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-right: 4px; margin-bottom: 4px; }
+    .tag-green { background: rgba(0,255,136,0.1); color: var(--green); border: 1px solid rgba(0,255,136,0.2); }
+    .tag-yellow { background: rgba(255,170,0,0.1); color: var(--yellow); border: 1px solid rgba(255,170,0,0.2); }
+    .tag-blue { background: rgba(88,166,255,0.1); color: var(--blue); border: 1px solid rgba(88,166,255,0.2); }
+    .progress-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin-top: 6px; }
+    .progress-fill { height: 100%; border-radius: 3px; }
+    a.link { color: var(--blue); text-decoration: none; }
+    a.link:hover { text-decoration: underline; }
+    .launch-btn {
+      display: inline-block;
+      background: var(--green);
+      color: #0d1117;
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 8px;
+    }
+    .launch-btn:hover { opacity: 0.85; }
+    .todo { padding: 4px 0; color: var(--muted); }
+    .todo::before { content: '[ ] '; color: var(--border); }
+    .done { padding: 4px 0; color: var(--green); }
+    .done::before { content: '[x] '; }
+    .phase { font-size: 12px; font-weight: 700; color: var(--yellow); text-transform: uppercase; letter-spacing: 0.1em; margin: 12px 0 6px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html" class="back">← Dashboard</a>
+
+  <h1>Crossword Daily</h1>
+  <div class="status">
+    <div class="dot"></div>
+    <span class="green">LIVE</span>
+    <span style="color:var(--muted)">— web player deployed, puzzles generating daily</span>
+  </div>
+
+  <div class="card">
+    <h2>Overview</h2>
+    <div class="stat-row">
+      <span class="stat-label">Product</span>
+      <span class="stat-val">Free daily crossword puzzle in browser</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Web Player</span>
+      <span class="stat-val"><a class="link" href="https://quickbitesdev.github.io/crossword-daily/" target="_blank">quickbitesdev.github.io/crossword-daily</a></span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Puzzle Data API</span>
+      <span class="stat-val"><a class="link" href="https://quickbitesdev.github.io/crossword-data/" target="_blank">quickbitesdev.github.io/crossword-data</a></span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Generator</span>
+      <span class="stat-val green">Running every 6h via Ollama (qwen3:8b)</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Languages</span>
+      <span class="stat-val">EN, FI, ES, FR, DE</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Themes</span>
+      <span class="stat-val">30+ (Animals, Mythology, Space, Music...)</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Grid Size</span>
+      <span class="stat-val">13x13, 10-20 words per puzzle</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Revenue</span>
+      <span class="stat-val yellow">$0 (pre-monetization)</span>
+    </div>
+    <div style="margin-top:16px">
+      <a class="launch-btn" href="https://quickbitesdev.github.io/crossword-daily/" target="_blank">Play Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Architecture</h2>
+    <div style="color:var(--muted);font-size:12px;line-height:2">
+      <span class="green">Browser</span> → fetches puzzle JSON from <span class="blue">crossword-data GitHub Pages</span><br>
+      <span class="blue">crossword-data</span> ← pushed daily by <span class="yellow">generate_crossword.py</span><br>
+      <span class="yellow">generator</span> → calls <span class="green">Ollama (qwen3:8b)</span> for word/clue generation<br>
+      <span class="green">Flutter app</span> → same JSON API, same puzzle data (future)
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Roadmap</h2>
+
+    <div class="phase">Phase 1 - Web Launch</div>
+    <div class="done">Create quickbitesdev/crossword-data puzzle API repo</div>
+    <div class="done">Set up GitHub Pages for puzzle data</div>
+    <div class="done">Build HTML/JS interactive web player</div>
+    <div class="done">Deploy web player to quickbitesdev/crossword-daily</div>
+    <div class="done">Daily cron job generates puzzles every 6h</div>
+    <div class="done">Puzzles available for EN, FI, ES, FR, DE</div>
+
+    <div class="phase">Phase 2 - Mobile</div>
+    <div class="todo">Update Flutter app base URL to crossword-data</div>
+    <div class="todo">Register Unstable Entity Oy on Google Play ($25)</div>
+    <div class="todo">Build signed release APK</div>
+    <div class="todo">Submit to Play Store</div>
+
+    <div class="phase">Phase 3 - Growth</div>
+    <div class="todo">Reddit launch posts (r/crossword, r/webgames, r/indiegaming)</div>
+    <div class="todo">Product Hunt launch</div>
+    <div class="todo">Add difficulty levels (Easy/Medium/Hard)</div>
+    <div class="todo">Generate all 25+ languages daily</div>
+    <div class="todo">Monetize: optional Premium ($1.99/mo) for all languages</div>
+  </div>
+
+  <div class="card">
+    <h2>Tags</h2>
+    <span class="tag tag-green">LIVE</span>
+    <span class="tag tag-green">Web App</span>
+    <span class="tag tag-blue">Flutter</span>
+    <span class="tag tag-blue">GitHub Pages</span>
+    <span class="tag tag-yellow">Play Store (soon)</span>
+    <span class="tag tag-green">Ollama AI</span>
+    <span class="tag tag-green">Daily Puzzle</span>
+  </div>
+</div>
+</body>
+</html>
