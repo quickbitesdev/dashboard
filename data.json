@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-30T11:08:14.354585+00:00",
+  "last_updated": "2026-03-30T12:08:46.245176+00:00",
   "day": 7,
   "summary": "Day 7 evening. PYPL ghost order fix validated clean - 3 safeguards deployed and tested. 246 eToro runs total. 11 buy signals queued for Monday open (AMZN RSI=14, META RSI=20). F&G=8 extreme fear record low. Crossword Daily LIVE at quickbitesdev.github.io/crossword-daily.",
   "budget": {
@@ -40,9 +40,9 @@
   },
   "chordroom": {
     "status": "up",
-    "visitors_total": 498,
-    "visitors_daily": 29,
-    "visitors_yesterday": 72,
+    "visitors_total": 500,
+    "visitors_daily": 30,
+    "visitors_yesterday": 68,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
@@ -96,7 +96,7 @@
         "balance": 999.37,
         "pnl": -0.63,
         "trades": 6,
-        "detail": "All positions flat. Balance $999.37. Running normally via schedule.txt (120min interval). EUR/USD 1.1496, GBP/USD 1.3251, USD/JPY 160.24."
+        "detail": "Thresholds adjusted: RSI 25/75->30/70, SMA deviation 0.5%->0.2% (tuned for daily reference rate APIs). GBP/USD RSI=24 was blocked by unreachable 0.5% SMA deviation. Should now enter trades when oversold conditions appear."
       }
     }
   },
@@ -378,6 +378,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 32 -> 29"
+    "ChordRoom visitors: 29 -> 30"
   ]
 }
