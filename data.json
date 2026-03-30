@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-30T00:02:31.557634+00:00",
+  "last_updated": "2026-03-30T01:03:03.733771+00:00",
   "day": 7,
   "summary": "Day 7 evening. Per-trade P&L tracking deployed across all 7 eToro sell paths with automatic historical backfill. Ghost plague confirmed at 3 instruments (PYPL x4, XRP, LTC) - all weekend-specific, all 24h locked. 13 buy signals queued for Monday, $359.46 cash ready, AMZN RSI=14/META RSI=20/JPM RSI=20 at extreme oversold. F&G=9 Extreme Fear. 3 Mastodon accounts lost (universeodon, ieji.de, defcon.social). 242 eToro runs total.",
   "budget": {
@@ -42,7 +42,7 @@
     "status": "up",
     "visitors_total": 484,
     "visitors_daily": 23,
-    "visitors_yesterday": 83,
+    "visitors_yesterday": 82,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
@@ -392,6 +392,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 30 -> 23"
+    "No changes since last update"
   ]
 }
