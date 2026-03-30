@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-30T06:05:32.739149+00:00",
+  "last_updated": "2026-03-30T07:06:04.452881+00:00",
   "day": 7,
   "summary": "Day 7 night. Critical eToro fix: signal-based sells now require MIN_SIGNAL_SELL_PROFIT_PCT=8% - bot was exiting winners at +0.2-2.4% instead of letting them reach 18-25% TP targets. F&G dropped to 8 (new low). 11 buy signals queued for Monday open. AMZN RSI=14, META RSI=20, JPM RSI=20 at extreme oversold. 243 eToro runs total.",
   "budget": {
@@ -40,9 +40,9 @@
   },
   "chordroom": {
     "status": "up",
-    "visitors_total": 493,
-    "visitors_daily": 30,
-    "visitors_yesterday": 71,
+    "visitors_total": 496,
+    "visitors_daily": 33,
+    "visitors_yesterday": 70,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
@@ -392,6 +392,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 27 -> 30"
+    "ChordRoom visitors: 30 -> 33"
   ]
 }
