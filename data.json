@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-03-30T09:07:09.139710+00:00",
+  "last_updated": "2026-03-30T10:07:40.094062+00:00",
   "day": 7,
-  "summary": "Day 7 night. Critical eToro fix: signal-based sells now require MIN_SIGNAL_SELL_PROFIT_PCT=8% - bot was exiting winners at +0.2-2.4% instead of letting them reach 18-25% TP targets. F&G dropped to 8 (new low). 11 buy signals queued for Monday open. AMZN RSI=14, META RSI=20, JPM RSI=20 at extreme oversold. 243 eToro runs total.",
+  "summary": "Day 7 evening. PYPL ghost order fix validated clean - 3 safeguards deployed and tested. 246 eToro runs total. 11 buy signals queued for Monday open (AMZN RSI=14, META RSI=20). F&G=8 extreme fear record low. Crossword Daily LIVE at quickbitesdev.github.io/crossword-daily.",
   "budget": {
     "initial": 500,
     "spent": 83,
@@ -47,10 +47,10 @@
     "revenue_eur": 3.0
   },
   "trading": {
-    "etoro_status": "ACTIVE - 242 runs. 9 bot positions. F&G=9 extreme fear. Circuit breaker SOFT (1 buy/run, strength >= 0.15). No buys - market closed (weekend). PYPL + XRP + LTC ghost locks active (GHOST: prefix, 24h). 13 buy signals queued for Monday. Per-trade P&L tracking deployed across all 7 sell paths + historical backfill.",
+    "etoro_status": "ACTIVE - 246 runs. 9 bot positions + 12 PYPL ghost dupes (close Monday) + 8 legacy = 29 total. F&G=8 extreme fear (record low). Circuit breaker SOFT (1 buy/run, strength >= 0.15). PYPL ghost fix validated: 3 safeguards deployed. 11 buy signals queued for Monday open.",
     "etoro_pnl": -13.34,
     "etoro_win_rate": "18.5% (5W/22L)",
-    "etoro_positions": "9 bot + 13 PYPL dupes + 8 legacy = 30 total (dupes will auto-close Monday)",
+    "etoro_positions": "9 bot + 12 PYPL dupes (close Monday) + 8 legacy = 29 total",
     "etoro_free_cash": 174.58,
     "etoro_invested": 0,
     "etoro_symbols": [
@@ -65,7 +65,7 @@
       "MSFT"
     ],
     "etoro_trades_total": 27,
-    "etoro_total_runs": 240,
+    "etoro_total_runs": 246,
     "paper_total": 1478.3200000000002,
     "paper_bots": {
       "ETH": {
@@ -90,13 +90,13 @@
         "balance": 193.27,
         "pnl": -3.37,
         "trades": 8,
-        "detail": "F&G=9 Extreme Fear \u2014 HOLD. Portfolio $193.27 (-3.37%). Both BTC and ETH underwater."
+        "detail": "F&G=8 Extreme Fear - HOLD. Portfolio $193.27 (-3.37%). Both BTC and ETH underwater."
       },
       "Forex": {
         "balance": 999.37,
         "pnl": -0.63,
         "trades": 6,
-        "detail": "All positions flat. Balance $999.37. Weekend inactivity expected. EUR/USD 1.1544, GBP/USD 1.3340."
+        "detail": "All positions flat. Balance $999.37. Running normally via schedule.txt (120min interval). EUR/USD 1.1496, GBP/USD 1.3251, USD/JPY 160.24."
       }
     }
   },
@@ -104,7 +104,7 @@
     "btc": 66519,
     "eth": 2003,
     "sol": 82.37,
-    "fear_greed": 9,
+    "fear_greed": 8,
     "fear_greed_label": "Extreme Fear"
   },
   "marketing": {
@@ -112,13 +112,11 @@
     "chordroom_mentions": 25,
     "direct_links": 30,
     "platforms": [
-      "Mastodon (5 instances)",
-      "Dev.to",
-      "Chordie Forum",
+      "Mastodon (3 active instances)",
+      "Dev.to (AUTH BROKEN)",
       "Hacker News",
       "Lemmy (restricted)",
       "Indie Hackers",
-      "Funkwhale",
       "GitLab",
       "Neocities",
       "Codeberg",
@@ -274,62 +272,50 @@
   },
   "issues": [
     {
-      "title": "F&G=9 Extreme Fear \u2014 deepest fear on record, circuit breaker HARD BLOCK",
+      "title": "Dev.to AUTH BROKEN (401) - needs Google account SMS step + API key regeneration",
       "detail": ""
     },
     {
-      "title": "Lemmy: banned from songwriting community \u2014 account may be at risk",
+      "title": "F&G=8 Extreme Fear - deepest fear on record",
       "detail": ""
     },
     {
-      "title": "eToro 18.5% win rate \u2014 market conditions brutal, stop-losses doing correct job",
+      "title": "Forex bot STALE - last run 2026-03-27 (3 days)",
       "detail": ""
     },
     {
-      "title": "PYPL null-PID ghost orders (4h timeout should clear automatically)",
+      "title": "3 Mastodon accounts dead (universeodon, ieji.de, defcon.social)",
       "detail": ""
     },
     {
-      "title": "BTC/ETH/SOL crash \u2014 crypto paper bots slightly underwater",
+      "title": "Chordie Forum permanently dead (bot detection)",
       "detail": ""
     },
     {
-      "title": "Chordie Forum bot detection active (404 on posts)",
-      "detail": ""
-    },
-    {
-      "title": "Funkwhale password lost \u2014 reset email not delivered",
-      "detail": ""
-    },
-    {
-      "title": "defcon.social account disabled (403)",
-      "detail": ""
-    },
-    {
-      "title": "Reddit sam_guitar_dev rate-limited \u2014 resumes ~07:31 UTC",
+      "title": "Funkwhale password lost - account dead",
       "detail": ""
     }
   ],
   "owner_actions": [
     {
       "priority": 1,
-      "action": "Investigate eToro ghost orders (PYPL + XRP)",
-      "status": "monitoring",
-      "detail": "Both PYPL and XRP return null posIDs on weekends. Likely eToro rejects crypto/some orders on weekends. Consider adding a market-hours check to skip crypto buys Saturday/Sunday.",
+      "action": "Set SMS_API_KEY to complete Google account setup",
+      "status": "blocked",
+      "detail": "Google account needs SMS verification to complete setup. Without it, Dev.to API key can't be regenerated. Blocks Crossword Daily promotion push.",
       "link": ""
     },
     {
       "priority": 2,
-      "action": "ChordRoom retention 0%",
-      "status": "monitoring",
-      "detail": "483 total visitors but no return visitors. Favorites/songbook UX needs improvement to convert traffic to users.",
+      "action": "Monitor Monday eToro open",
+      "status": "pending",
+      "detail": "12 PYPL ghost positions should auto-close. Then 11 buy signals queue fires (AMZN/META/JPM at extreme RSI lows). Watch logs for 'DUPLICATE FIX: PYPL'.",
       "link": ""
     },
     {
       "priority": 3,
-      "action": "Lemmy account check",
-      "status": "urgent",
-      "detail": "alex_riv banned from 2 communities (songwriting + fuck_ai). Check if main account is still active or if full ban issued.",
+      "action": "ChordRoom retention 0%",
+      "status": "monitoring",
+      "detail": "497 total visitors but no return visitors. Favorites/songbook UX needs improvement to convert traffic to users.",
       "link": ""
     }
   ],
@@ -392,6 +378,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 31 -> 32"
+    "No changes since last update"
   ]
 }
