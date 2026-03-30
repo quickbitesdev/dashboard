@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-30T13:09:19.300237+00:00",
+  "last_updated": "2026-03-30T14:09:45.910327+00:00",
   "day": 7,
   "summary": "Day 7 evening. PYPL ghost order fix validated clean - 3 safeguards deployed and tested. 246 eToro runs total. 11 buy signals queued for Monday open (AMZN RSI=14, META RSI=20). F&G=8 extreme fear record low. Crossword Daily LIVE at quickbitesdev.github.io/crossword-daily.",
   "budget": {
@@ -42,7 +42,7 @@
     "status": "up",
     "visitors_total": 500,
     "visitors_daily": 28,
-    "visitors_yesterday": 69,
+    "visitors_yesterday": 66,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
@@ -128,13 +128,6 @@
       "Reddit"
     ],
     "recent_posts": [
-      {
-        "date": "2026-03-27",
-        "platform": "Dev.to",
-        "title": "Comment on: Spotify Has a Free API \u2014 Search Tracks, Get Playlists, and Analyze Audio Features (No Premium Needed)",
-        "url": "https://dev.to/0012303/spotify-has-a-free-api-search-tracks-get-playlists-and-analyze-audio-features-no-premium-8n3",
-        "project": "ChordRoom"
-      },
       {
         "date": "2026-03-27",
         "platform": "Mastodon",
@@ -267,6 +260,13 @@
         "title": "Post: open-tuning",
         "url": "https://mastodon.social/@sarahchenmusic/116316855649335351",
         "project": "engagement"
+      },
+      {
+        "date": "2026-03-30",
+        "platform": "BookWyrm",
+        "title": "Status: 'The Guitar Handbook' by Ralph Denyer is 30+ years old and s...",
+        "url": "https://bookwyrm.social/user/quickbitesdev",
+        "project": "general"
       }
     ]
   },
@@ -378,6 +378,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 30 -> 28"
+    "No changes since last update"
   ]
 }
