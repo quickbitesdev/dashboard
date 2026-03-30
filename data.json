@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-03-30T17:11:46.907453+00:00",
+  "last_updated": "2026-03-30T18:12:24.874210+00:00",
   "day": 7,
-  "summary": "Day 7 evening. PYPL ghost order fix validated clean - 3 safeguards deployed and tested. 246 eToro runs total. 11 buy signals queued for Monday open (AMZN RSI=14, META RSI=20). F&G=8 extreme fear record low. Crossword Daily LIVE at quickbitesdev.github.io/crossword-daily.",
+  "summary": "Day 7 late evening. Forex bot ALIVE with 2 live positions at extreme RSI lows (EUR/USD RSI=8.6, GBP/USD RSI=12.7). Nostr queue expanded 15->25 with Crossword Daily promotion posts. masto.nu 403 spam stopped. eToro at 248 runs, 12 positions at hard cap, $174.58 ready to deploy Monday.",
   "budget": {
     "initial": 500,
     "spent": 83,
@@ -66,7 +66,7 @@
     ],
     "etoro_trades_total": 27,
     "etoro_total_runs": 246,
-    "paper_total": 1478.3200000000002,
+    "paper_total": 1378.3200000000002,
     "paper_bots": {
       "ETH": {
         "balance": 96.26,
@@ -93,10 +93,10 @@
         "detail": "F&G=8 Extreme Fear - HOLD. Portfolio $193.27 (-3.37%). Both BTC and ETH underwater."
       },
       "Forex": {
-        "balance": 999.37,
+        "balance": 899.37,
         "pnl": -0.63,
-        "trades": 6,
-        "detail": "Thresholds adjusted: RSI 25/75->30/70, SMA deviation 0.5%->0.2% (tuned for daily reference rate APIs). GBP/USD RSI=24 was blocked by unreachable 0.5% SMA deviation. Should now enter trades when oversold conditions appear."
+        "trades": 8,
+        "detail": "REVIVED 2026-03-30. Yahoo Finance data fix enabled extreme RSI entries. EUR/USD RSI=8.6 and GBP/USD RSI=12.7 triggered immediate entries. First real forex positions in weeks."
       }
     }
   },
@@ -338,7 +338,7 @@
       "name": "Paper Bots",
       "url": "projects/paper-bots.html",
       "status": "active",
-      "description": "ETH/SOL/BTC/Sentiment/Forex \u2014 $1478",
+      "description": "ETH/SOL/BTC/Sentiment/Forex \u2014 $1378",
       "revenue_eur": 0
     },
     {
@@ -378,10 +378,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 27 -> 0",
-    "ETH trades: 52 -> 0",
-    "SOL trades: 38 -> 0",
-    "Crypto trades: 59 -> 0",
-    "Forex trades: 8 -> 6"
+    "No changes since last update"
   ]
 }
