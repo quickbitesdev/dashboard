@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-30T07:06:04.452881+00:00",
+  "last_updated": "2026-03-30T08:06:39.321400+00:00",
   "day": 7,
   "summary": "Day 7 night. Critical eToro fix: signal-based sells now require MIN_SIGNAL_SELL_PROFIT_PCT=8% - bot was exiting winners at +0.2-2.4% instead of letting them reach 18-25% TP targets. F&G dropped to 8 (new low). 11 buy signals queued for Monday open. AMZN RSI=14, META RSI=20, JPM RSI=20 at extreme oversold. 243 eToro runs total.",
   "budget": {
@@ -41,8 +41,8 @@
   "chordroom": {
     "status": "up",
     "visitors_total": 496,
-    "visitors_daily": 33,
-    "visitors_yesterday": 70,
+    "visitors_daily": 31,
+    "visitors_yesterday": 72,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
@@ -130,13 +130,6 @@
       "Reddit"
     ],
     "recent_posts": [
-      {
-        "date": "2026-03-27",
-        "platform": "Mastodon (mstdn.ca)",
-        "title": "Intro post on mstdn.ca",
-        "url": "https://mstdn.ca/@quickbitesdev/116302264621455739",
-        "project": "ChordRoom"
-      },
       {
         "date": "2026-03-27",
         "platform": "Dev.to",
@@ -269,6 +262,13 @@
         "title": "Status: Reading 'Songwriters on Songwriting' by Paul Zollo \u2014 intervi...",
         "url": "https://bookwyrm.social/user/quickbitesdev",
         "project": "general"
+      },
+      {
+        "date": "2026-03-30",
+        "platform": "Mastodon",
+        "title": "Post: open-tuning",
+        "url": "https://mastodon.social/@sarahchenmusic/116316855649335351",
+        "project": "engagement"
       }
     ]
   },
@@ -392,6 +392,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 30 -> 33"
+    "ChordRoom visitors: 33 -> 31"
   ]
 }
