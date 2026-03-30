@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-30T10:07:40.094062+00:00",
+  "last_updated": "2026-03-30T11:08:14.354585+00:00",
   "day": 7,
   "summary": "Day 7 evening. PYPL ghost order fix validated clean - 3 safeguards deployed and tested. 246 eToro runs total. 11 buy signals queued for Monday open (AMZN RSI=14, META RSI=20). F&G=8 extreme fear record low. Crossword Daily LIVE at quickbitesdev.github.io/crossword-daily.",
   "budget": {
@@ -40,8 +40,8 @@
   },
   "chordroom": {
     "status": "up",
-    "visitors_total": 497,
-    "visitors_daily": 32,
+    "visitors_total": 498,
+    "visitors_daily": 29,
     "visitors_yesterday": 72,
     "registered_users": 2,
     "revenue_eur": 3.0
@@ -378,6 +378,6 @@
     }
   ],
   "changes": [
-    "No changes since last update"
+    "ChordRoom visitors: 32 -> 29"
   ]
 }
