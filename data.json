@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-29T23:02:09.700712+00:00",
+  "last_updated": "2026-03-30T00:02:31.557634+00:00",
   "day": 7,
   "summary": "Day 7 evening. Per-trade P&L tracking deployed across all 7 eToro sell paths with automatic historical backfill. Ghost plague confirmed at 3 instruments (PYPL x4, XRP, LTC) - all weekend-specific, all 24h locked. 13 buy signals queued for Monday, $359.46 cash ready, AMZN RSI=14/META RSI=20/JPM RSI=20 at extreme oversold. F&G=9 Extreme Fear. 3 Mastodon accounts lost (universeodon, ieji.de, defcon.social). 242 eToro runs total.",
   "budget": {
@@ -41,8 +41,8 @@
   "chordroom": {
     "status": "up",
     "visitors_total": 484,
-    "visitors_daily": 30,
-    "visitors_yesterday": 78,
+    "visitors_daily": 23,
+    "visitors_yesterday": 83,
     "registered_users": 2,
     "revenue_eur": 3.0
   },
@@ -130,20 +130,6 @@
       "Reddit"
     ],
     "recent_posts": [
-      {
-        "date": "2026-03-27",
-        "platform": "BookWyrm",
-        "title": "Status: Reading 'Music Theory for Guitarists' by Tom Kolb. Love that...",
-        "url": "https://bookwyrm.social/user/quickbitesdev",
-        "project": "general"
-      },
-      {
-        "date": "2026-03-27",
-        "platform": "Mastodon (mstdn.ca)",
-        "title": "quickbitesdev account created on mstdn.ca \u2014 fully active",
-        "url": "https://mstdn.ca/@quickbitesdev",
-        "project": "QuickBites"
-      },
       {
         "date": "2026-03-27",
         "platform": "Mastodon (mstdn.ca)",
@@ -269,6 +255,20 @@
         "title": "Post: ukulele-switch",
         "url": "https://mastodon.social/@sarahchenmusic/116312254923261112",
         "project": "engagement"
+      },
+      {
+        "date": "2026-03-29",
+        "platform": "Mastodon",
+        "title": "Post: chordroom-artists",
+        "url": "https://mastodon.social/@sarahchenmusic/116314952818360963",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-03-29",
+        "platform": "BookWyrm",
+        "title": "Status: Reading 'Songwriters on Songwriting' by Paul Zollo \u2014 intervi...",
+        "url": "https://bookwyrm.social/user/quickbitesdev",
+        "project": "general"
       }
     ]
   },
@@ -392,6 +392,6 @@
     }
   ],
   "changes": [
-    "ChordRoom visitors: 35 -> 30"
+    "ChordRoom visitors: 30 -> 23"
   ]
 }
