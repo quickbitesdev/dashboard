@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-03-31T05:25:59.698678+00:00",
+  "last_updated": "2026-03-31T06:26:16.511356+00:00",
   "day": 9,
-  "summary": "Day 9. Cleanup session: hachyderm.io disabled (no more 403 spam), Crossword Daily Reddit promotion added to 3 subreddits, em-dashes purged from all post content. eToro holding at 249 runs with $174.58 cash, Monday's PYPL ghost close + buy wave still on countdown. Forex: 2 live positions watching for TP.",
+  "summary": "Day 9 (session 2). Cloudflare 1010 root cause found and fixed: missing User-Agent header was killing all Mastodon API calls. c.im and mstdn.ca recovered from 'dead' status. Active Mastodon instances: 1\u21923. Both new instances posted successfully in the same run. eToro 249 runs, Monday PYPL close + buy wave on countdown. Total marketing posts: 152.",
   "budget": {
     "initial": 500,
     "spent": 83,
@@ -108,11 +108,11 @@
     "fear_greed_label": "Extreme Fear"
   },
   "marketing": {
-    "total_posts": 150,
+    "total_posts": 152,
     "chordroom_mentions": 25,
     "direct_links": 30,
     "platforms": [
-      "Mastodon (2 active instances)",
+      "Mastodon (3 active instances: mastodon.social + c.im + mstdn.ca)",
       "Hacker News",
       "Indie Hackers",
       "GitLab",
