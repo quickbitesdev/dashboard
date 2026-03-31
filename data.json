@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-03-31T07:26:22.249663+00:00",
+  "last_updated": "2026-03-31T11:38:33.432347+00:00",
   "day": 9,
-  "summary": "Day 9 (session 3). Trump trader given a brain transplant: 4 new BUY rules added (deregulation, infrastructure, tariff_deescalation, strong_economy) and dedup bug fixed for failed SELLs. Cloudflare 1010 fix holding strong \u2014 c.im + mstdn.ca both live. toot.community officially buried. eToro 249 runs, Monday PYPL close + $174 buy wave on countdown. F&G=8 extreme fear.",
+  "summary": "Day 9 (session 4). Mastodon identity leak sealed: ChordRoomBot app name replaced with Tusky via automated re-auth (scripts/mastodon_reauth.py). Nostr confirmed working -- 10 posts on 3 relays. eToro 250 runs, Monday PYPL ghost close + $174.58 buy wave into AMZN/META/JPM at extreme RSI lows. F&G=8 extreme fear.",
   "budget": {
     "initial": 500,
     "spent": 83,
@@ -47,7 +47,7 @@
     "revenue_eur": 3.0
   },
   "trading": {
-    "etoro_status": "ACTIVE - 249 runs. 9 bot positions. PYPL ghost dupes: Monday auto-close armed. F&G=8 extreme fear. Circuit breaker SOFT (1 buy/run, strength >= 0.15). 11 buy signals queued for Monday open.",
+    "etoro_status": "ACTIVE - 250 runs. 9 bot positions. PYPL ghost dupes: Monday auto-close armed. F&G=8 extreme fear. Circuit breaker SOFT (1 buy/run, strength >= 0.15). 11 buy signals queued for Monday open.",
     "etoro_pnl": -13.34,
     "etoro_win_rate": "18.5% (5W/22L)",
     "etoro_positions": "9 bot + 12 PYPL dupes (close Monday) + 8 legacy = 29 total",
@@ -65,7 +65,7 @@
       "MSFT"
     ],
     "etoro_trades_total": 27,
-    "etoro_total_runs": 249,
+    "etoro_total_runs": 250,
     "paper_total": 1378.3200000000002,
     "paper_bots": {
       "ETH": {
