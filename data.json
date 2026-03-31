@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-31T13:39:33.463478+00:00",
+  "last_updated": "2026-03-31T14:40:14.766871+00:00",
   "day": 9,
   "summary": "Day 9 (session 4). Mastodon identity leak sealed: ChordRoomBot app name replaced with Tusky via automated re-auth (scripts/mastodon_reauth.py). Nostr confirmed working -- 10 posts on 3 relays. eToro 250 runs, Monday PYPL ghost close + $174.58 buy wave into AMZN/META/JPM at extreme RSI lows. F&G=8 extreme fear.",
   "budget": {
@@ -40,11 +40,12 @@
   },
   "chordroom": {
     "status": "up",
-    "visitors_total": 0,
-    "visitors_daily": 0,
-    "visitors_yesterday": 0,
+    "visitors_total": 500,
+    "visitors_daily": 28,
+    "visitors_yesterday": 28,
     "registered_users": 0,
-    "revenue_eur": 3.0
+    "revenue_eur": 3.0,
+    "api_status": "auth_failed"
   },
   "trading": {
     "etoro_status": "ACTIVE - 250 runs. 9 bot positions. PYPL ghost dupes: Monday auto-close armed. F&G=8 extreme fear. Circuit breaker SOFT (1 buy/run, strength >= 0.15). 11 buy signals queued for Monday open.",
