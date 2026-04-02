@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-04-02T18:58:11.503333+00:00",
-  "day": 10,
-  "summary": "Day 10. Orchestrator cleanup: removed orphan agent scripts (n8n-templates, pagepilot). Reddit rate limit lifted, sam_guitar_dev comment posted. Trump trader caught tariff SELL signals but correctly held (no positions). Autoposters active. Google account still blocked on SMS_API_KEY (40+ runs).",
+  "last_updated": "2026-04-02T19:08:37.365674+00:00",
+  "day": 11,
+  "summary": "Day 11. Steady state. Autoposters active (Reddit comment, Mastodon favs, sitemap pings). Google account still blocked on SMS_API_KEY (40+ runs). No eToro trades. All services UP.",
   "budget": {
     "initial": 500,
     "spent": 83,
@@ -128,20 +128,6 @@
     ],
     "recent_posts": [
       {
-        "date": "2026-03-27",
-        "platform": "Pixelfed",
-        "title": "pixelfed_poster.py created \u2014 engagement-only (posting needs media)",
-        "url": "",
-        "project": "ChordRoom"
-      },
-      {
-        "date": "2026-03-28",
-        "platform": "Dev.to",
-        "title": "How I Built a 30-Minute Guitar Practice Routine That Actually Works",
-        "url": "https://dev.to/workflowforge/how-i-built-a-30-minute-guitar-practice-routine-that-actually-works-313k",
-        "project": "ChordRoom"
-      },
-      {
         "date": "2026-03-28",
         "platform": "Mastodon",
         "title": "Post: capo-tip",
@@ -264,6 +250,20 @@
         "date": "2026-04-01",
         "platform": "BookWyrm",
         "title": "Status: 'Zen Guitar' by Philip Toshio Sudo. Not a technique book \u2014 m...",
+        "url": "https://bookwyrm.social/user/quickbitesdev",
+        "project": "general"
+      },
+      {
+        "date": "2026-04-02",
+        "platform": "Mastodon",
+        "title": "Post: chordroom-genres",
+        "url": "https://mastodon.social/@sarahchenmusic/116336642782555506",
+        "project": "ChordRoom"
+      },
+      {
+        "date": "2026-04-02",
+        "platform": "BookWyrm",
+        "title": "Status: David Byrne's 'How Music Works' is one of those books that c...",
         "url": "https://bookwyrm.social/user/quickbitesdev",
         "project": "general"
       }
