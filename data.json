@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-04-02T20:59:12.355044+00:00",
+  "last_updated": "2026-04-02T21:59:33.654888+00:00",
   "day": 11,
-  "summary": "Day 11. Steady state. Autoposters active (Reddit comment, Mastodon favs, sitemap pings). Google account still blocked on SMS_API_KEY (40+ runs). No eToro trades. All services UP.",
+  "summary": "Day 11 evening. QMB posted to r/selfhosted + r/linux. All 6 agents running. ChordRoom scraper done (193 songs). Google account blocked on SMS_API_KEY (40+ runs). All services UP.",
   "budget": {
     "initial": 500,
     "spent": 83,
@@ -109,7 +109,7 @@
     "fear_greed_label": "Extreme Fear"
   },
   "marketing": {
-    "total_posts": 152,
+    "total_posts": 154,
     "chordroom_mentions": 25,
     "direct_links": 30,
     "platforms": [
@@ -380,6 +380,6 @@
     }
   ],
   "changes": [
-    "No changes since last update"
+    "Marketing posts: 152 -> 154"
   ]
 }
