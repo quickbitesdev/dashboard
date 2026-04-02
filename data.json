@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-04-02T21:59:33.654888+00:00",
+  "last_updated": "2026-04-02T23:00:14.551026+00:00",
   "day": 11,
-  "summary": "Day 11 evening. QMB posted to r/selfhosted + r/linux. All 6 agents running. ChordRoom scraper done (193 songs). Google account blocked on SMS_API_KEY (40+ runs). All services UP.",
+  "summary": "Day 11 late evening. All agents checked. ChordRoom scraper DONE (193 songs). Google account blocked (SMS_API_KEY, 40+ runs). Autoposters running. Trump trader active (tariff signals). eToro 254 runs, -$14.64.",
   "budget": {
     "initial": 500,
     "spent": 83,
@@ -48,9 +48,9 @@
     "api_status": "auth_failed"
   },
   "trading": {
-    "etoro_status": "ACTIVE - 250 runs. 9 bot positions. PYPL ghost dupes: Monday auto-close armed. F&G=8 extreme fear. Circuit breaker SOFT (1 buy/run, strength >= 0.15). 11 buy signals queued for Monday open.",
-    "etoro_pnl": -13.34,
-    "etoro_win_rate": "18.5% (5W/22L)",
+    "etoro_status": "ACTIVE - 254 runs. 9 bot positions. F&G=8 extreme fear. Trump tariff signals (SELL AMZN/WMT) - no positions to close.",
+    "etoro_pnl": -14.64,
+    "etoro_win_rate": "28.1% (9W/23L)",
     "etoro_positions": "9 bot + 12 PYPL dupes (close Monday) + 8 legacy = 29 total",
     "etoro_free_cash": 174.58,
     "etoro_invested": 0,
@@ -65,8 +65,8 @@
       "GOOG",
       "MSFT"
     ],
-    "etoro_trades_total": 27,
-    "etoro_total_runs": 250,
+    "etoro_trades_total": 32,
+    "etoro_total_runs": 254,
     "paper_total": 1378.3200000000002,
     "paper_bots": {
       "ETH": {
@@ -333,7 +333,7 @@
       "name": "eToro Bot",
       "url": "projects/etoro-bot.html",
       "status": "active",
-      "description": "Real trading, 27 trades, P&L $-13.34",
+      "description": "Real trading, 32 trades, P&L $-14.64",
       "revenue_eur": 0
     },
     {
@@ -380,6 +380,6 @@
     }
   ],
   "changes": [
-    "Marketing posts: 152 -> 154"
+    "eToro trades: 27 -> 32"
   ]
 }
