@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-04-03T00:00:29.919436+00:00",
-  "day": 11,
-  "summary": "Day 11 night pass. Housekeeping: disabled chordroom-scraper (DONE) and google-account (BLOCKED) agents from schedule to stop wasting cycles. Moved reddit-account to Production. All services healthy.",
+  "last_updated": "2026-04-03T01:00:55.542125+00:00",
+  "day": 12,
+  "summary": "Day 12 midnight pass. Steady state - all services up, 4 agents running, autoposters active. No phase changes needed. Market in extreme fear (F&G=8), tariff headlines driving sell signals but no matching positions.",
   "budget": {
     "initial": 500,
     "spent": 83,
@@ -48,10 +48,10 @@
     "api_status": "auth_failed"
   },
   "trading": {
-    "etoro_status": "ACTIVE - 254 runs. 9 bot positions. F&G=8 extreme fear. Trump tariff signals (SELL AMZN/WMT) - no positions to close.",
+    "etoro_status": "ACTIVE - 254 runs. 7 open positions. F&G=8 extreme fear. Trump tariff signals (SELL AMZN/WMT) - no positions to close.",
     "etoro_pnl": -14.64,
     "etoro_win_rate": "28.1% (9W/23L)",
-    "etoro_positions": "9 bot + 12 PYPL dupes (close Monday) + 8 legacy = 29 total",
+    "etoro_positions": "7 open positions",
     "etoro_free_cash": 174.58,
     "etoro_invested": 0,
     "etoro_symbols": [
@@ -73,31 +73,31 @@
         "balance": 96.26,
         "pnl": 0,
         "trades": 0,
-        "detail": "ETH $2,003. DCA buying dips. 54 trades total. Down ~2.1%."
+        "detail": ""
       },
       "SOL": {
         "balance": 91.36,
         "pnl": 0,
         "trades": 0,
-        "detail": "SOL $82.37. DCA active. 38 trades. Down ~0.8%."
+        "detail": ""
       },
       "Crypto": {
         "balance": 98.06,
         "pnl": 0,
         "trades": 0,
-        "detail": "BTC $66,519. DCA accumulating. 60 trades. Down ~3.8%."
+        "detail": ""
       },
       "Sentiment": {
         "balance": 193.27,
-        "pnl": -3.37,
-        "trades": 8,
-        "detail": "F&G=8 Extreme Fear - HOLD signal. Portfolio $193.27 (-3.37%)."
+        "pnl": 0,
+        "trades": 0,
+        "detail": ""
       },
       "Forex": {
         "balance": 899.37,
-        "pnl": -0.63,
-        "trades": 8,
-        "detail": "REVIVED 2026-03-30. Yahoo Finance data fix enabled extreme RSI entries. EUR/USD RSI=8.6, GBP/USD RSI=12.7. Watching for TP at +1% SMA deviation."
+        "pnl": 0,
+        "trades": 0,
+        "detail": ""
       }
     }
   },
@@ -113,17 +113,14 @@
     "chordroom_mentions": 25,
     "direct_links": 30,
     "platforms": [
-      "Mastodon (3 active instances: mastodon.social + c.im + mstdn.ca)",
+      "Mastodon (3 instances)",
       "Hacker News",
       "Indie Hackers",
-      "GitLab",
       "Neocities",
       "Codeberg",
       "Write.as",
-      "Nostr (queue only)",
       "BookWyrm",
       "Pixelfed",
-      "n8n Community",
       "Reddit"
     ],
     "recent_posts": [
@@ -271,23 +268,15 @@
   },
   "issues": [
     {
-      "title": "Dev.to AUTH BROKEN (401) - needs Google SMS + API key regen",
+      "title": "Dev.to AUTH BROKEN (401)",
       "detail": ""
     },
     {
-      "title": "F&G=8 Extreme Fear - deepest on record",
+      "title": "ChordRoom admin API 403 (secret rotated)",
       "detail": ""
     },
     {
-      "title": "Nostr relay connectivity broken - 0 posts ever delivered",
-      "detail": ""
-    },
-    {
-      "title": "Mastodon OAuth app name 'ChordRoomBot' leaks bot identity",
-      "detail": ""
-    },
-    {
-      "title": "6 Mastodon accounts dead",
+      "title": "SMS_API_KEY missing - blocks Google account",
       "detail": ""
     }
   ],
@@ -301,21 +290,14 @@
     },
     {
       "priority": 2,
-      "action": "Monitor Monday eToro open - PYPL ghost close + 11 buy signals",
-      "status": "pending",
+      "action": "CHORDROOM_ADMIN_SECRET - fix dashboard analytics",
+      "status": "blocked",
       "detail": "",
       "link": ""
     },
     {
       "priority": 3,
-      "action": "ChordRoom retention 0% - favorites/songbook feature needed",
-      "status": "monitoring",
-      "detail": "",
-      "link": ""
-    },
-    {
-      "priority": 4,
-      "action": "Fix Mastodon OAuth app name 'ChordRoomBot' on mastodon.social",
+      "action": "193 pending songs need approval in ChordRoom admin",
       "status": "pending",
       "detail": "",
       "link": ""
@@ -380,6 +362,7 @@
     }
   ],
   "changes": [
-    "No changes since last update"
+    "Sentiment trades: 8 -> 0",
+    "Forex trades: 8 -> 0"
   ]
 }
